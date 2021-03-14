@@ -3,11 +3,11 @@ package com.youcode.entities;
 
 import static javax.persistence.GenerationType.IDENTITY;
 
+import java.io.Serializable;
 import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
@@ -21,9 +21,9 @@ import javax.persistence.TemporalType;
  */
 @Entity
 @Table(name = "reservation", catalog = "reservation")
-public class Reservation implements java.io.Serializable {
+public class Reservation implements Serializable {
 
-	private Integer idReservation;
+	private Long idReservation;
 	private Student student;
 	private Typereservation typereservation;
 	private Date dateReservation;
@@ -43,15 +43,15 @@ public class Reservation implements java.io.Serializable {
 	@GeneratedValue(strategy = IDENTITY)
 
 	@Column(name = "id_reservation", unique = true, nullable = false)
-	public Integer getIdReservation() {
+	public Long getIdReservation() {
 		return this.idReservation;
 	}
 
-	public void setIdReservation(Integer idReservation) {
+	public void setIdReservation(Long idReservation) {
 		this.idReservation = idReservation;
 	}
 
-	@ManyToOne(fetch = FetchType.LAZY)
+	@ManyToOne
 	@JoinColumn(name = "id_student", nullable = false)
 	public Student getStudent() {
 		return this.student;
@@ -61,7 +61,7 @@ public class Reservation implements java.io.Serializable {
 		this.student = student;
 	}
 
-	@ManyToOne(fetch = FetchType.LAZY)
+	@ManyToOne
 	@JoinColumn(name = "id_typeReservation", nullable = false)
 	public Typereservation getTypereservation() {
 		return this.typereservation;

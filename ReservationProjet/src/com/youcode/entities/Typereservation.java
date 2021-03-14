@@ -1,14 +1,16 @@
 package com.youcode.entities;
 // Generated 12 mar. 2021 à 02:37:21 by Hibernate Tools 4.3.5.Final
 
+import static javax.persistence.GenerationType.IDENTITY;
+
+import java.io.Serializable;
 import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
-import static javax.persistence.GenerationType.IDENTITY;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
@@ -20,9 +22,9 @@ import javax.persistence.TemporalType;
  */
 @Entity
 @Table(name = "typereservation", catalog = "reservation")
-public class Typereservation implements java.io.Serializable {
+public class Typereservation implements Serializable {
 
-	private Integer idTypeReservation;
+	private Long idTypeReservation;
 	private String typeReservation;
 	private Date dateReservation;
 	private Set<Reservation> reservations = new HashSet<Reservation>(0);
@@ -45,11 +47,12 @@ public class Typereservation implements java.io.Serializable {
 	@GeneratedValue(strategy = IDENTITY)
 
 	@Column(name = "id_typeReservation", unique = true, nullable = false)
-	public Integer getIdTypeReservation() {
+	public Long getIdTypeReservation() {
 		return this.idTypeReservation;
 	}
+	
 
-	public void setIdTypeReservation(Integer idTypeReservation) {
+	public void setIdTypeReservation(Long idTypeReservation) {
 		this.idTypeReservation = idTypeReservation;
 	}
 
@@ -72,7 +75,7 @@ public class Typereservation implements java.io.Serializable {
 		this.dateReservation = dateReservation;
 	}
 
-	@OneToMany(fetch = FetchType.LAZY, mappedBy = "typereservation")
+	@OneToMany(mappedBy = "typereservation")
 	public Set<Reservation> getReservations() {
 		return this.reservations;
 	}
