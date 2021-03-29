@@ -1,7 +1,6 @@
 package com.youcode.Dao;
 
 import java.util.List;
-
 import com.youcode.entities.Admin;
 
 public interface AdminDAO {

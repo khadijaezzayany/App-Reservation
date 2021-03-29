@@ -2,16 +2,16 @@ package com.youcode.Dao;
 
 import java.util.List;
 
-import com.youcode.entities.Typereservation;
+import com.youcode.entities.TypeReser;
 
 public interface TypereservationDAO {
-	public void addTypereservation(Typereservation tr);
+	public void addTypereservation(TypeReser tr);
 
-	public void updateTypereservation(Typereservation tr);
+	public void updateTypereservation(TypeReser tr);
 
-	public List<Typereservation> listTypereservation();
+	public List<TypeReser> listTypereservation();
 
-	public Typereservation getTypereservationById(Long id);
+	public TypeReser getTypereservationById(Long id);
 
 	public void removeTypereservation(Long id);
 }

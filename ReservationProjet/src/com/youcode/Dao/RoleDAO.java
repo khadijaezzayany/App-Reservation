@@ -9,7 +9,7 @@ public interface RoleDAO {
 
 	public void updateRole(Role r);
 
-	public List<Role> listRole();
+	public List<Role> getAllRole();
 
 	public Role getRoleById(Long id);
 

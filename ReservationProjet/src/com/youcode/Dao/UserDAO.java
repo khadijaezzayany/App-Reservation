@@ -13,6 +13,8 @@ public interface UserDAO {
 
 	public User getUserById(Long id);
 
+	//public User getUserByEmail(String email);
+
 	public void removeUser(Long id);
 
 }

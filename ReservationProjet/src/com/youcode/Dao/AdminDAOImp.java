@@ -2,38 +2,88 @@ package com.youcode.Dao;
 
 import java.util.List;
 
-import com.youcode.entities.Admin;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.query.Query;
+import org.springframework.stereotype.Repository;
 
+import com.youcode.entities.Admin;
+import com.youcode.entities.Reservation;
+import com.youcode.entities.User;
+import com.youcode.util.HibernateUtil;
+@Repository
 public class AdminDAOImp implements AdminDAO {
+
+	Session session;
+	Transaction tranasaction = null;
 
 	@Override
 	public void addAdmin(Admin a) {
-		// TODO Auto-generated method stub
-		
+		session = HibernateUtil.getSession();
+		session.beginTransaction();
+		session.save(a);
+		session.getTransaction().commit();
+		System.out.println("Add User is Done!");
+
 	}
 
 	@Override
 	public void updateAdmin(Admin a) {
-		// TODO Auto-generated method stub
-		
+		 Admin admin;
+	        session = HibernateUtil.getSession();
+	        session.beginTransaction();
+	        admin = session.find(Admin.class, a.getId());
+	        if (admin != null){
+	            admin.setFirstName(a.getFirstName());
+	            admin.setLastName(a.getLastName());
+	            admin.setEmail(a.getEmail());
+	            admin.setPassword(a.getPassword());
+	            admin.setFirstName(a.getFirstName());
+	            admin.setPhone(a.getPhone());
+	            admin.setRole(a.getRole());
+	            System.out.println("Admin is updated");
+	        }else{
+	            System.out.println("Admin doesn't exist");
+	        }
+	        session.getTransaction().commit();
 	}
 
 	@Override
 	public List<Admin> listAdmin() {
-		// TODO Auto-generated method stub
-		return null;
+		session = HibernateUtil.getSession();
+		tranasaction = session.beginTransaction();
+
+		Query query = session.createQuery("from Admin", Admin.class);
+
+		List admin = query.getResultList();
+
+		return admin;
 	}
 
 	@Override
 	public Admin getAdminById(Long id) {
-		// TODO Auto-generated method stub
-		return null;
+		session = HibernateUtil.getSession();
+		session.beginTransaction();
+		Admin admin = session.find(Admin.class, id);
+		session.getTransaction().commit();
+		return admin;
 	}
 
 	@Override
 	public void removeAdmin(Long id) {
-		// TODO Auto-generated method stub
-		
+		Admin admin;
+		session = HibernateUtil.getSession();
+		session.beginTransaction();
+		admin = session.find(Admin.class, id);
+		if (admin != null) {
+			session.delete(admin);
+			session.flush();
+			System.out.println("Delete Admin");
+		} else {
+			System.out.println("Admin doesn't exist");
+		}
+		session.getTransaction().commit();
 	}
 
 }
