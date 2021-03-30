@@ -38,8 +38,8 @@ public class User {
 	@Column(nullable = false)
 	private boolean accepte;
 
-	@OneToOne(mappedBy = "user", fetch = FetchType.LAZY)
-	private Reservation  reservation;
+//	@OneToOne(mappedBy = "user")
+//	private Reservation  reservation;
 
 	@OneToOne
 	@JoinColumn(name = "id_role")
@@ -142,13 +142,13 @@ public class User {
 	
 	
 
-	public Reservation getReservation() {
-		return reservation;
-	}
-
-	public void setReservation(Reservation reservation) {
-		this.reservation = reservation;
-	}
+//	public Reservation getReservation() {
+//		return reservation;
+//	}
+//
+//	public void setReservation(Reservation reservation) {
+//		this.reservation = reservation;
+//	}
 
 	@Override
 	public String toString() {

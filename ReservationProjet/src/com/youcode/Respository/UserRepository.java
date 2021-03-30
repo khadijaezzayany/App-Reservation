@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
 import com.youcode.entities.User;
 import com.youcode.util.HibernateUtil;
 
-
+@Repository
 public class UserRepository {
 	Session session = null;
 	Transaction tranasaction = null;

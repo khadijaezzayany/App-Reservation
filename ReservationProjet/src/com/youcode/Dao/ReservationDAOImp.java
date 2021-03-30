@@ -12,6 +12,7 @@ import com.youcode.entities.Reservation;
 import com.youcode.entities.User;
 import com.youcode.util.HibernateUtil;
 @Component
+@Repository
 public class ReservationDAOImp implements ReservationDAO {
 
 	Session session;

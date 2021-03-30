@@ -4,13 +4,15 @@ import org.hibernate.Hibernate;
 import org.hibernate.Session;
 import org.hibernate.query.Query;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
 import com.youcode.entities.Reservation;
 import com.youcode.entities.TypeReser;
 import com.youcode.entities.User;
 import com.youcode.util.HibernateUtil;
 
-@Component
+//@Component
+@Repository
 public class ReservationRepository {
 	Session session;
 	public TypeReser getResByName(String name) {

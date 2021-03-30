@@ -58,6 +58,11 @@ public class TypereservationDAOImp implements TypereservationDAO {
 		List typeReser = query.getResultList();
 
 		return typeReser;
+		
+		
+		
+		
+		
 	}
 
 	@Override

@@ -13,28 +13,80 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.youcode.Dao.TypereservationDAO;
 import com.youcode.Dao.UserDAO;
+import com.youcode.Dao.UserDAOImp;
 import com.youcode.Respository.UserRepository;
 import com.youcode.entities.TypeReser;
 import com.youcode.entities.User;
 import com.youcode.sevice.UserService;
 
+//@Controller
+//@RequestMapping("/")
+
+
+
+
+
+
 @Controller
 @RequestMapping("/")
 
+//public class LoginController {
+//
+//	@Autowired
+//	private UserDAOImp userDao;
+//	@Autowired
+//	private UserRepository userRepository;
+//
+//	@RequestMapping(value = "/")
+//	public String Login() {
+//		return "login";
+//	}
+//
+//	@RequestMapping(value = "/Account", method = RequestMethod.POST)
+//	public String account(HttpServletRequest req) {
+//		String email = req.getParameter("email");
+//		String pass = req.getParameter("pass");
+//		// String role = req.getParameter("role");
+//		User user = new User();
+//
+//		user = userRepository.getUserByEmail(email);
+//		String userPassword = user.getPassword();
+//		if (userPassword.equals(pass)) {
+//			return "dashadmin";
+//		} else {
+//			return "student";
+//		}
+//
+//	}
+//
+//}
+
+
+
+
+
+
+
+
+
+
+
+
+
 public class LoginController {
 
-	User user = new User();
+	static User user = new User();
 	
 	//private UserRepository userRep;
 	
-	@Autowired
-	private TypereservationDAO typereservationDAO;
+//	@Autowired
+//	private TypereservationDAO typereservationDAO;
 
 	@Autowired
 	private UserDAO userDao;
 	
 //	static User user = new User();
-	private UserService userService;
+	//private UserService userService;
 
 
 	@RequestMapping(value = "/")
@@ -53,7 +105,7 @@ public class LoginController {
 		///String userPassword = user.getPassword();
 		//System.out.println(userPassword);
 		
-		System.out.println(user.getPassword());
+//		System.out.println(user.getPassword());
 		if (user.getPassword().equals(pass)) {
 			
 			if(user.getRole().getRoleName().equals("Admin")) {

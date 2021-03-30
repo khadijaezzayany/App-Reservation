@@ -14,8 +14,8 @@ public class TypeReser {
     @Column(nullable = false)
     private int nomberPlaces;
     
-    @OneToOne(mappedBy = "typeRes")
-    private Reservation resrvation;
+//    @OneToOne(mappedBy = "typeRes")
+//    private Reservation resrvation;
     
 	public TypeReser() {
 		super();
