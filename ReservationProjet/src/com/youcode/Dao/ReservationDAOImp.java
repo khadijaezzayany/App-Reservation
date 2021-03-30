@@ -4,7 +4,9 @@ import java.util.List;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
+import org.hibernate.query.Query;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
 
@@ -16,6 +18,8 @@ import com.youcode.util.HibernateUtil;
 public class ReservationDAOImp implements ReservationDAO {
 
 	Session session;
+	Transaction tranasaction = null;
+
 	@Override
 	public void addReservation(Reservation res) {
 		session = HibernateUtil.getSession();
@@ -49,11 +53,14 @@ public class ReservationDAOImp implements ReservationDAO {
 
 	@Override
 	public List<Reservation> listReservation() {
-		 session = HibernateUtil.getSession();
-	        session.beginTransaction();
-	        List<Reservation> listRes = session.createQuery("From Reservation ").list();
-	        session.getTransaction().commit();
-	        return listRes;
+		session = HibernateUtil.getSession();
+		tranasaction = session.beginTransaction();
+
+		Query query = session.createQuery("from Reservation", Reservation.class);
+
+		List reserv = query.getResultList();
+
+		return reserv;
 	}
 
 	@Override

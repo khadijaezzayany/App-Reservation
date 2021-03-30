@@ -16,13 +16,15 @@ public class UserRepository {
 	public User getUserByEmail(String email) {
 		User user;
 		session = HibernateUtil.getSession();
-		session.beginTransaction();
-		Query query = session.createQuery("from User where email=:email");
+		//session.beginTransaction();
+		Query query = session.createQuery("from User u where u.email=:email");
 		query.setParameter("email", email);
 		try {
 			user = (User) query.getSingleResult();
+			if (user == null) {
+				System.out.println("user is null");
+			}
 			return user;
-
 		} catch (Exception e) {
 			e.printStackTrace();
 			return null;

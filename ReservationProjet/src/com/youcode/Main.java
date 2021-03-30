@@ -1,5 +1,6 @@
 package com.youcode;
 
+import com.youcode.Dao.ReservationDAOImp;
 import com.youcode.Dao.RoleDAO;
 import com.youcode.Dao.RoleDAOImp;
 import com.youcode.Dao.StudentDAOImp;
@@ -26,7 +27,7 @@ public class Main {
 
 //		Role role = new Role();
 
-		RoleDAO r = new RoleDAOImp();
+		//RoleDAO r = new RoleDAOImp();
 //		System.out.println(r.getRoleById(1L));
 
 		// User user = ;
@@ -41,9 +42,20 @@ public class Main {
 //		studentDao.updateStudent(student);
 		
 		
-		UserRepository user = new UserRepository();
-		User us = user.getUserByEmail("Ali@gmail.com");
-		System.out.println(us.getFirstName());
+//		UserRepository user = new UserRepository();
+//		User us = user.getUserByEmail("Ali@gmail.com");
+//		System.out.println(us.getFirstName());
+		
+		
+//		ReservationDAOImp f = new ReservationDAOImp();
+//		System.out.println(f.listReservation());
+		
+		
+	
+//		UserDAOImp f = new UserDAOImp();
+//		f.removeUser(6L);
+		
+		
 		
 	}
 

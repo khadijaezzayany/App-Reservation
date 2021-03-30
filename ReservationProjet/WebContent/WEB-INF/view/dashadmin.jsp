@@ -7,7 +7,7 @@
 <meta charset="UTF-8">
 <title>list-users</title>
 <link type="text/css" rel="stylesheet"
-	href="${pageContext.request.contextPath}/resoures/css/style.css"/>
+	href="${pageContext.request.contextPath}/resoures/css/style.css" />
 </head>
 <body>
 	<div id="warepper">
@@ -31,6 +31,8 @@
 
 				</tr>
 				<c:forEach var="tempUser" items="${user}">
+				
+				
 					<tr>
 						<td>${ tempUser.firstName }</td>
 						<td>${ tempUser.lastName }</td>
@@ -38,6 +40,13 @@
 						<td>${ tempUser.password }</td>
 						<td>${ tempUser.phone }</td>
 						<td>${ tempUser.role.roleName }</td>
+						<td>
+							<form action="deleteUser" method="post">
+								<input type="hidden" value="${tempUser.id}" name="id"/>
+								<input type="submit" value="Delete"/>
+							</form>
+						</td>
+
 					</tr>
 
 				</c:forEach>

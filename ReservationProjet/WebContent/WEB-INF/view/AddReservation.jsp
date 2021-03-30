@@ -9,7 +9,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<form action=addResBut method="post">
+<form action="addResrvation" method="post">
 		<label>Date </label> <input type="date" name="date"> 
 		<label>Type Reservation</label> 
 			<select name="category">

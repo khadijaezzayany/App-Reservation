@@ -12,6 +12,30 @@
 	<h1>Student Page</h1>
 	 <a href="update"><button>Update</button></a> 
 	<a href="addResBut"><button>Add Reservation</button></a> 
+	
+	<h3>Your Reservation Historique</h3>
+	
+			<table>
+				<tr>
+					<th>Date of reservation</th>
+					<th>Type of reservation</th>
+					<th>Confirmation</th>
+					
+
+				</tr>
+				<c:forEach var="re" items="${histRes}">
+					<tr>
+						<td>${ re.dateRes }</td>
+						<td>${ re.typeRes }</td>
+						<td>${ re.confirmation }</td>
+						
+					</tr>
+
+				</c:forEach>
+
+
+			</table>
+	
 
 	<%-- <form action="addRes" method="post">
 		<label>Date </label> <input type="date" name="date"> <label>Type

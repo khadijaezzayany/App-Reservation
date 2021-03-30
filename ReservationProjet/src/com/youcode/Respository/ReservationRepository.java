@@ -1,5 +1,7 @@
 package com.youcode.Respository;
 
+import java.util.List;
+
 import org.hibernate.Hibernate;
 import org.hibernate.Session;
 import org.hibernate.query.Query;
@@ -27,4 +29,14 @@ public class ReservationRepository {
 			return null;
 		}
 	}
+	
+	
+	public List<Reservation> getReservationByUser(User user){
+        session = HibernateUtil.getSession();
+        session.beginTransaction();
+        Query query = session.createQuery("From Reservation where user.id=:userId");
+        query.setParameter("userId", user.getId());
+        List<Reservation> list = query.list();
+        return list;
+    }
 }

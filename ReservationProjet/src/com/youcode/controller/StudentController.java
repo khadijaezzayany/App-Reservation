@@ -31,11 +31,11 @@ public class StudentController {
 	private ReservationRepository res;
 
 	@Autowired
-	private ReservationDAOImp type;
+	private ReservationDAOImp resrvationDaoImp;
 	@Autowired
 	private TypereservationDAO typereservationDAO;
 
-	@RequestMapping(value= "\"addRes\"", method = RequestMethod.POST)
+	@RequestMapping(value= "addResrvation", method = RequestMethod.POST)
 	public String addRes(Model model, HttpServletRequest request ) {
 		String date = request.getParameter("date");
 		String category = request.getParameter("category");
@@ -43,7 +43,7 @@ public class StudentController {
 		TypeReser typeRes = res.getResByName(category);
 		//System.out.println(LoginController.user.getFirstName());
 		Reservation reservation = new Reservation(LoginController.user, date, true, typeRes);
-		type.addReservation(reservation);
+		resrvationDaoImp.addReservation(reservation);
 		return "student";
 	}
 //	 @RequestMapping("listTypeReservation")
@@ -63,7 +63,20 @@ public class StudentController {
 		return "updateProfile";
 
 	}
-
+//
+//	@RequestMapping(value = "/histRes")
+//	public String histRe(ModelMap modelMap ) {
+//		List<Reservation> hestRiserv = resrvationDaoImp.listReservation();
+//		modelMap.put("histRes", hestRiserv);
+////		model.addAttribute("student", LoginController.user);
+////		List<Reservation> theType = type.listReservation();
+////		model.put("histRes", theType);
+//		return "redirect:/student";
+//		
+//		
+//		}
+	
+	
 	@RequestMapping(value = "addResBut")
 	public String listType(ModelMap modelMap ) {
 		// model.addAttribute("student", LoginController.user);
