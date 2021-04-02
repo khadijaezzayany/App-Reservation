@@ -68,8 +68,18 @@ public class StudentController {
 //		
 //		
 //		}
-	
-	
+	@RequestMapping(value = "histResStudent")
+	public String histResStudent(ModelMap modelMap ) {
+		// model.addAttribute("student", LoginController.user);
+		List<Reservation> theType = resrvationDaoImp.listReservation();
+		modelMap.put("listTr", theType);
+		
+		
+		return "histResStudent";
+
+	}
+
+	 
 	@RequestMapping(value = "addResBut")
 	public String listType(ModelMap modelMap ) {
 		// model.addAttribute("student", LoginController.user);

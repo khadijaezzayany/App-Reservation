@@ -1,39 +1,22 @@
 package org.example.controller;
 
-import java.io.IOException;
-
-import javax.servlet.http.HttpServletResponse;
-
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.servlet.ModelAndView;
-
-
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
-import org.springframework.ui.ModelMap;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 
 import org.example.Dao.UserDAO;
 import org.example.Respository.ReservationRepository;
 import org.example.Respository.UserRepository;
 import org.example.entities.Reservation;
 import org.example.entities.User;
-
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
 public class LoginController {
-//	@RequestMapping(value = "/")
-//	public ModelAndView test(HttpServletResponse response) throws IOException {
-//		System.out.println("bonjour test !");
-//		return new ModelAndView("test");
-//	}
-
 
 	static User user = new User();
 
@@ -81,5 +64,3 @@ public class LoginController {
 	}
 
 }
-
-

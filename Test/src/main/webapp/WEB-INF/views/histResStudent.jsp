@@ -21,7 +21,7 @@
 					
 
 				</tr>
-				<c:forEach var="re" items="${histResStu}">
+				<c:forEach var="re" items="${listTr}">
 					<tr>
 						<td>${ re.dateRes }</td>
 						<td>${ re.typeRes.typeRes }</td>

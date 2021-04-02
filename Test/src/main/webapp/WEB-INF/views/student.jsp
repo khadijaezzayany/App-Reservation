@@ -12,8 +12,10 @@
 	<h1>Student Page</h1>
 	 <a href="update"><button>Update</button></a> 
 	<a href="addResBut"><button>Add Reservation</button></a> 
+	<a href="histResStudent"><button>Your Reservation Historique</button></a> 
 	
-	<h3>Your Reservation Historique</h3>
+	
+<%-- 	<h3>Your Reservation Historique</h3>
 	
 			<table>
 				<tr>
@@ -35,7 +37,7 @@
 
 
 			</table>
-	
+	 --%>
 
 	<%-- <form action="addRes" method="post">
 		<label>Date </label> <input type="date" name="date"> <label>Type
