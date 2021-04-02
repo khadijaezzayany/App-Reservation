@@ -30,12 +30,12 @@ public class Student extends User {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Student(Long id, String firstName, String lastName, String email, String password, int phone, Role role) {
+	public Student(Long id, String firstName, String lastName, String email, String password, String phone, Role role) {
 		super(id, firstName, lastName, email, password, phone, role);
 		// TODO Auto-generated constructor stub
 	}
 
-	public Student(String firstName, String lastName, String email, String password, int phone, Role role,
+	public Student(String firstName, String lastName, String email, String password, String phone, Role role,
 			int reservationMax) {
 		super(firstName, lastName, email, password, phone, role);
 		// TODO Auto-generated constructor stub
@@ -47,7 +47,7 @@ public class Student extends User {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Student(long id,String firstName, String lastName, String email, String password, int phone, Role role) {
+	public Student(long id,String firstName, String lastName, String email, String password, String phone, Role role) {
 		super(id,firstName, lastName, email, password, phone, role);
 		// TODO Auto-generated constructor stub
 	}

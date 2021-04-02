@@ -12,10 +12,12 @@
 <body>
 	<div id="warepper">
 		<div id="header">
-			<h2>List of Users</h2>
-
+			
+	 <a href="listUsers"><button>List of Users</button></a> 
+	<a href="typeReser"><button>Type Of Reservation</button></a> 
+	<a href=histReservation><button>All  Historique Of Reservation</button></a>
 		</div>
-	</div>
+	<%-- </div>
 	<div is="container">
 		<div id="content">
 
@@ -53,8 +55,8 @@
 
 
 			</table>
-
+ --%>
 		</div>
-	</div>
+
 </body>
 </html>

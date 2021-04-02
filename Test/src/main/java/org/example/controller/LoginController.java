@@ -7,7 +7,9 @@ import javax.servlet.http.HttpServletRequest;
 import org.example.Dao.UserDAO;
 import org.example.Respository.ReservationRepository;
 import org.example.Respository.UserRepository;
+import org.example.entities.Admin;
 import org.example.entities.Reservation;
+import org.example.entities.Role;
 import org.example.entities.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -19,6 +21,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class LoginController {
 
 	static User user = new User();
+	
 
 	@Autowired
 	ReservationRepository reservationRepository;
@@ -28,6 +31,7 @@ public class LoginController {
 
 	@RequestMapping(value = "/")
 	public String Login() {
+
 		return "login";
 	}
 
@@ -42,24 +46,24 @@ public class LoginController {
 		if (user.getPassword().equals(pass)) {
 
 			if (user.getRole().getRoleName().equals("Admin")) {
-				List<User> theUser = userDao.listUser();
-				modelMap.put("user", theUser);
+//				List<User> theUser = userDao.listUser();
+//				modelMap.put("user", theUser);
 				return "dashadmin";
 
 			} else if (user.getRole().getRoleName().equals("Student")) {
 
-				List<Reservation> hestRiserv = reservationRepository.getReservationByUser(LoginController.user);
-
-				modelMap.put("histRes", hestRiserv);
+//				List<Reservation> hestRiserv = reservationRepository.getReservationByUser(LoginController.user);
+//
+//				modelMap.put("histRes", hestRiserv);
 
 				return "student";
 			}
 
 		} else {
-			return "login";
+			return "redirect:/login";
 		}
 
-		return "login";
+		return "redirect:/login";
 
 	}
 

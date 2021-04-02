@@ -1,17 +1,13 @@
 package org.example.entities;
 
-import java.util.List;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
 import javax.persistence.JoinColumn;
-import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
@@ -33,7 +29,7 @@ public class User {
 	@Column(nullable = false)
 	private String password;
 	@Column(nullable = false)
-	private int phone;
+	private String phone;
 	
 	@Column(nullable = false)
 	private boolean accepte;
@@ -63,7 +59,7 @@ public class User {
 		this.accepte = accepte;
 	}
 
-	public User(Long id, String firstName, String lastName, String email, String password, int phone, Role role) {
+	public User(Long id, String firstName, String lastName, String email, String password, String phone, Role role) {
 		super();
 		this.id = id;
 		this.firstName = firstName;
@@ -74,7 +70,7 @@ public class User {
 		this.role = role;
 	}
 
-	public User(String firstName, String lastName, String email, String password, int phone, Role role) {
+	public User(String firstName, String lastName, String email, String password, String phone, Role role) {
 		super();
 		this.firstName = firstName;
 		this.lastName = lastName;
@@ -124,11 +120,11 @@ public class User {
 		this.password = password;
 	}
 
-	public int getPhone() {
+	public String getPhone() {
 		return  phone;
 	}
 
-	public void setPhone(int phone) {
+	public void setPhone(String phone) {
 		this.phone = phone;
 	}
 

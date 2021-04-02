@@ -51,9 +51,9 @@ public class AdminDAOImp implements AdminDAO {
 		session = HibernateUtil.getSession();
 		tranasaction = session.beginTransaction();
 
-		Query query = session.createQuery("from Admin", Admin.class);
+		Query query = (Query) session.createQuery("from Admin", Admin.class);
 
-		List admin = query.getResultList();
+		List admin = ((org.hibernate.query.Query<Admin>) query).getResultList();
 
 		return admin;
 	}

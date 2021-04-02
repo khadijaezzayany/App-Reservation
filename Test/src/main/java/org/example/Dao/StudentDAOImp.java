@@ -2,14 +2,13 @@ package org.example.Dao;
 
 import java.util.List;
 
+import org.example.entities.Student;
+import org.example.util.HibernateUtil;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.query.Query;
 import org.springframework.stereotype.Repository;
 
-import org.example.entities.Student;
-import org.example.entities.User;
-import org.example.util.HibernateUtil;
 @Repository
 public class StudentDAOImp implements StudentDAO {
 
@@ -20,7 +19,7 @@ public class StudentDAOImp implements StudentDAO {
 	public void addStudent(Student a) {
 		session = HibernateUtil.getSession();
 		session.beginTransaction();
-		session.persist(a);
+		session.save(a);
 		session.getTransaction().commit();
 
 	}
@@ -76,17 +75,17 @@ public class StudentDAOImp implements StudentDAO {
 	@Override
 	public void removeStudent(Long id) {
 		Student student;
-        session = HibernateUtil.getSession();
-        session.beginTransaction();
-        student = session.find(Student.class, id);
-        if (student != null){
-            session.delete(student);
-            session.flush();
-            System.out.println("Delete Student");
-        }else{
-            System.out.println("Student doesn't exist");
-        }
-        session.getTransaction().commit();
+		session = HibernateUtil.getSession();
+		session.beginTransaction();
+		student = session.find(Student.class, id);
+		if (student != null) {
+			session.delete(student);
+			session.flush();
+			System.out.println("Delete Student");
+		} else {
+			System.out.println("Student doesn't exist");
+		}
+		session.getTransaction().commit();
 
 	}
 
