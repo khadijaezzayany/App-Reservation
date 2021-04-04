@@ -9,7 +9,36 @@
 <title>Insert title here</title>
 </head>
 <body>
-<form action="update" method="post" modelAttribute ="student" >
+<table>
+				<tr>
+					<th>Fist Name</th>
+					<th>Last Name</th>
+					<th>Email</th>
+					<th>Phone</th>
+					<th>Password</th>
+					<th>Role</th>
+					<th>Action</th>
+
+				</tr>
+				<c:forEach var="tempUser" items="${displayStudent}">
+				
+				
+					<tr>
+						<td>${ tempUser.firstName }</td>
+						<td>${ tempUser.lastName }</td>
+						<td>${ tempUser.email }</td>
+						<td>${ tempUser.password }</td>
+						<td>${ tempUser.phone }</td>
+						<td>${ tempUser.role.roleName }</td>
+					
+
+					</tr>
+
+				</c:forEach>
+
+
+			</table>
+<%-- <form action="update" method="post" modelAttribute ="student" >
 			<label>Nom :</label>
 			<input type="text" name="nom" value="<c:out value='${student.firstName}' />" /> 
 			<label>prenom : </label>
@@ -21,6 +50,6 @@
 			<label>Password : </label>
 			<input type="password" name="pass" value="<c:out value='${student.password}' />" />
 			<input type="submit" value="update"> 
-		</form>
+		</form> --%>
 </body>
 </html>

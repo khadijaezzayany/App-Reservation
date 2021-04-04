@@ -10,6 +10,7 @@ import javax.persistence.InheritanceType;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
+import javax.validation.constraints.Size;
 
 @Entity
 @Inheritance(strategy = InheritanceType.JOINED)
@@ -20,7 +21,9 @@ public class User {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id_user")
 	private Long id;
+	
 	@Column(nullable = false)
+//	@Size(min = 2, max=4)
 	private String firstName;
 	@Column(nullable = false)
 	private String lastName;
@@ -30,7 +33,7 @@ public class User {
 	private String password;
 	@Column(nullable = false)
 	private String phone;
-	
+
 	@Column(nullable = false)
 	private boolean accepte;
 
@@ -121,7 +124,7 @@ public class User {
 	}
 
 	public String getPhone() {
-		return  phone;
+		return phone;
 	}
 
 	public void setPhone(String phone) {
@@ -135,8 +138,6 @@ public class User {
 	public void setRole(Role role) {
 		this.role = role;
 	}
-	
-	
 
 //	public Reservation getReservation() {
 //		return reservation;
@@ -149,8 +150,7 @@ public class User {
 	@Override
 	public String toString() {
 		return "User [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", email=" + email
-				+ ", password=" + password + ", phone=" + phone + ", reservation="  + ", role=" + role
-				+ "]";
+				+ ", password=" + password + ", phone=" + phone + ", reservation=" + ", role=" + role + "]";
 	}
 
 }

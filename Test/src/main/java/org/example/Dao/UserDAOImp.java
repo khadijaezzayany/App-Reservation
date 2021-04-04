@@ -23,7 +23,7 @@ public class UserDAOImp implements UserDAO {
 		session = HibernateUtil.getSession();
 		tranasaction = session.beginTransaction();
 
-		session.persist(u);
+		session.save(u);
 		tranasaction.commit();
 
 	}

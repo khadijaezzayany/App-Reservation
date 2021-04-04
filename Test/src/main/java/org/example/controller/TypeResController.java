@@ -27,7 +27,7 @@ public class TypeResController {
 	public ModelAndView typeReserv(ModelMap modelMape) {
 		List<TypeReser> theType = trdi.listTypereservation();
 		modelMape.put("typeRe", theType);
-		return new ModelAndView("typeReser");
+		return new ModelAndView("TypeOfReservation");
 	}
 	
 	
@@ -38,7 +38,7 @@ public class TypeResController {
 		TypeReser typeReser = new TypeReser(typeRes,nomberPlaces);
 		trdi.addTypereservation(typeReser);
 
-		return "redirect:/typeReser";
+		return "redirect:/TypeOfReservation";
 		
 	}
 	
@@ -47,7 +47,7 @@ public class TypeResController {
 		long id = Long.parseLong(request.getParameter("id"));
 		//System.out.println(id);
 		trdi.removeTypereservation(id);
-		return "redirect:/typeReser";
+		return "redirect:/TypeOfReservation";
 	}
 	
 	@RequestMapping("DispalyEditType")
@@ -72,7 +72,7 @@ public class TypeResController {
 		TypeReser typeReser = new TypeReser(id,typeRes,nomberPlaces);
 		trdi.updateTypereservation(typeReser);
 
-		return "redirect:/typeReser";
+		return "redirect:/TypeOfReservation";
 		
 	}
 	

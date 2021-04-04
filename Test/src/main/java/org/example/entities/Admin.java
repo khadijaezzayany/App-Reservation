@@ -1,26 +1,25 @@
 package org.example.entities;
 
+import java.io.Serializable;
+
 import javax.persistence.Entity;
-import javax.persistence.PrimaryKeyJoinColumn;
 import javax.persistence.Table;
 
 @Entity
-@PrimaryKeyJoinColumn(name = "id_user")
+//@PrimaryKeyJoinColumn(name = "id_user")
 @Table(name = "admin")
-public class Admin extends User {
+public class Admin extends User implements Serializable {
 
 	public Admin() {
 		super();
 	}
 
-	public Admin(Long id, String firstName, String lastName, String email, String password, int phone, Role role) {
+	public Admin(Long id, String firstName, String lastName, String email, String password, String phone, Role role) {
 		super(id, firstName, lastName, email, password, phone, role);
-		// TODO Auto-generated constructor stub
 	}
 
-	public Admin(String firstName, String lastName, String email, String password, int phone, Role role) {
+	public Admin(String firstName, String lastName, String email, String password, String phone, Role role) {
 		super(firstName, lastName, email, password, phone, role);
-		// TODO Auto-generated constructor stub
 	}
 
 }

@@ -1,15 +1,10 @@
 package org.example.controller;
 
-import java.util.List;
-
 import javax.servlet.http.HttpServletRequest;
 
 import org.example.Dao.UserDAO;
 import org.example.Respository.ReservationRepository;
 import org.example.Respository.UserRepository;
-import org.example.entities.Admin;
-import org.example.entities.Reservation;
-import org.example.entities.Role;
 import org.example.entities.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -21,13 +16,12 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class LoginController {
 
 	static User user = new User();
-	
 
 	@Autowired
 	ReservationRepository reservationRepository;
 
 	@Autowired
-	private UserDAO userDao;
+	UserDAO userDao;
 
 	@RequestMapping(value = "/")
 	public String Login() {
@@ -48,9 +42,11 @@ public class LoginController {
 			if (user.getRole().getRoleName().equals("Admin")) {
 //				List<User> theUser = userDao.listUser();
 //				modelMap.put("user", theUser);
-				return "dashadmin";
+				//modelMap.put("detail",LoginController.user);
+				return "indexx";
 
 			} else if (user.getRole().getRoleName().equals("Student")) {
+				// userDao.getUserById(user.getId());
 
 //				List<Reservation> hestRiserv = reservationRepository.getReservationByUser(LoginController.user);
 //

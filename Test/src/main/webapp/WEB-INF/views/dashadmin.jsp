@@ -17,7 +17,7 @@
 	<a href="typeReser"><button>Type Of Reservation</button></a> 
 	<a href=histReservation><button>All  Historique Of Reservation</button></a>
 		</div>
-	<%-- </div>
+	</div>
 	<div is="container">
 		<div id="content">
 
@@ -42,12 +42,7 @@
 						<td>${ tempUser.password }</td>
 						<td>${ tempUser.phone }</td>
 						<td>${ tempUser.role.roleName }</td>
-						<td>
-							<form action="deleteUser" method="post">
-								<input type="hidden" value="${tempUser.id}" name="id"/>
-								<input type="submit" value="Delete"/>
-							</form>
-						</td>
+					
 
 					</tr>
 
@@ -55,7 +50,8 @@
 
 
 			</table>
- --%>
+
+		</div>
 		</div>
 
 </body>

@@ -38,7 +38,7 @@
                             <form:label path="email">Email</form:label>
                         </td>
                         <td>
-                            <form:input path="email" name="email" id="email" />
+                            <form:input path="email" name="email" id="email"  />
                         </td>
                     </tr>
                  
@@ -47,7 +47,7 @@
                             <form:label path="phone">Phone</form:label>
                         </td>
                         <td>
-                            <form:input path="phone" name="phone" id="phone" />
+                            <form:input path="phone" name="phone" id="phone"   />
                         </td>
                     </tr>
                       <tr>

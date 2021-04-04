@@ -26,20 +26,20 @@ public class RegistrationController {
 
 	  
 	  
-	  
-		@RequestMapping("register")
-		public String register() {
-			return "register";
-		}
-	  
-	  
-	  
-	  @RequestMapping(value = "/registerProcess", method = RequestMethod.POST)
-	  public ModelAndView addUser(HttpServletRequest request, HttpServletResponse response,
-	  @ModelAttribute("user") User user) {
-
-	  userService.addUser(user);
-
-	  return new ModelAndView("welcome", "firstname", user.getFirstName());
-	  }
+//	  
+//		@RequestMapping("register")
+//		public String register() {
+//			return "register";
+//		}
+//	  
+//	  
+//	  
+//	  @RequestMapping(value = "/registerProcess", method = RequestMethod.POST)
+//	  public ModelAndView addUser(HttpServletRequest request, HttpServletResponse response,
+//	  @ModelAttribute("user") User user) {
+//
+//	  userService.addUser(user);
+//
+//	  return new ModelAndView("welcome", "firstname", user.getFirstName());
+//	  }
 }

@@ -2,16 +2,13 @@ package org.example.Respository;
 
 import java.util.List;
 
-import org.hibernate.Hibernate;
-import org.hibernate.Session;
-import org.hibernate.query.Query;
-import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Repository;
-
 import org.example.entities.Reservation;
 import org.example.entities.TypeReser;
 import org.example.entities.User;
 import org.example.util.HibernateUtil;
+import org.hibernate.Session;
+import org.hibernate.query.Query;
+import org.springframework.stereotype.Repository;
 
 //@Component
 @Repository

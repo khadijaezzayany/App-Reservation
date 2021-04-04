@@ -35,7 +35,7 @@ public class StudentController {
 		//System.out.println(date + category);
 		TypeReser typeRes = res.getResByName(category);
 		//System.out.println(LoginController.user.getFirstName());
-		Reservation reservation = new Reservation(LoginController.user, date, true, typeRes);
+		Reservation reservation = new Reservation(LoginController.user, date, false, typeRes);
 		resrvationDaoImp.addReservation(reservation);
 		return "student";
 	}
@@ -49,13 +49,13 @@ public class StudentController {
 		
 //	}
 
-	@RequestMapping("update")
-	public String UpdateProfile(Model model) {
-		model.addAttribute("student", LoginController.user);
-
-		return "updateProfile";
-
-	}
+//	@RequestMapping("update")
+//	public String UpdateProfile(Model model) {
+//		model.addAttribute("student", LoginController.user);
+//
+//		return "updateProfile";
+//
+//	}
 //
 //	@RequestMapping(value = "/histRes")
 //	public String histRe(ModelMap modelMap ) {
