@@ -1,11 +1,13 @@
 package org.example.controller;
 
+import java.net.http.HttpRequest;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 
 import org.example.Dao.ReservationDAOImp;
 import org.example.Dao.UserDAOImp;
+import org.example.Respository.SentEmail;
 import org.example.Respository.UserRepository;
 import org.example.entities.Reservation;
 import org.example.entities.User;
@@ -34,8 +36,30 @@ public class AdminController {
 	}
 
 	@RequestMapping(value = "listUsers")
-	public String histResStudent(ModelMap modelMap) {
+	public String histResStudent(ModelMap modelMap, HttpServletRequest req) {
+		if (req.getParameter("idAccept") != null) {
+			long id = Long.parseLong(req.getParameter("idAccept"));
+			User user = userDaoImp.getUserById(id);
+
+			user.setAccepte(true);
+			userDaoImp.updateUser(user);
+			SentEmail.sendEmail(user.getEmail(), "You're accepted");
+
+
+		}
+		else if (req.getParameter("idRefuse") != null) {
+			long id = Long.parseLong(req.getParameter("idRefuse"));
+			User user = userDaoImp.getUserById(id);
+			SentEmail.sendEmail(user.getEmail(), "You're refused");
+
+			user.setAccepte(false);
+			userDaoImp.updateUser(user);
+
+		}
 		List<User> theType = userRepository.listAllStudents();
+		List<User> theTypeAcc = userRepository.listAllStudentsAccp();
+		modelMap.put("userAcc", theTypeAcc);
+
 		modelMap.put("user", theType);
 
 		return "listUser";
@@ -53,7 +77,5 @@ public class AdminController {
 //		return "redirect:/Account";
 //		
 //	}
-
-	
 
 }

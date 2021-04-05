@@ -23,7 +23,7 @@ public class TypeResController {
 	
 	static TypeReser typeReser = new TypeReser();
 
-	@RequestMapping("typeReser")
+	@RequestMapping("TypeOfReservation")
 	public ModelAndView typeReserv(ModelMap modelMape) {
 		List<TypeReser> theType = trdi.listTypereservation();
 		modelMape.put("typeRe", theType);

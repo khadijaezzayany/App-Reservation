@@ -37,7 +37,8 @@ public class LoginController {
 
 		user = userRep.getUserByEmail(email);
 
-		if (user.getPassword().equals(pass)) {
+		if (user.getPassword().equals(pass) && user.isAccepte()) {
+		
 
 			if (user.getRole().getRoleName().equals("Admin")) {
 //				List<User> theUser = userDao.listUser();

@@ -30,26 +30,31 @@ public class UserDAOImp implements UserDAO {
 
 	@Override
 	public void updateUser(User upUser) {
-		User user;
 		session = HibernateUtil.getSession();
-		session.beginTransaction();
-		user = session.find(User.class, upUser.getId());
-		if (user != null) {
-			user.setFirstName(upUser.getFirstName());
-			user.setLastName(upUser.getLastName());
-			user.setEmail(upUser.getEmail());
-			user.setPassword(upUser.getPassword());
-			user.setPhone(upUser.getPhone());
-			user.setRole(upUser.getRole());
-			session.flush();
-			session.getTransaction().commit();
+		Transaction ts = session.beginTransaction();
+		
+		session.update(upUser);
+		
+		ts.commit();
+		session.close();
+		
+//		user = session.find(User.class, upUser.getId());
+//		if (user != null) {
+//			user.setFirstName(upUser.getFirstName());
+//			user.setLastName(upUser.getLastName());
+//			user.setEmail(upUser.getEmail());
+//			user.setPassword(upUser.getPassword());
+//			user.setPhone(upUser.getPhone());
+//			user.setRole(upUser.getRole());
+//			session.flush();
+//			session.getTransaction().commit();
 			System.out.println("User is updated");
-		} else {
-			session.getTransaction().commit();
-
-			System.out.println("User doesn't exist");
-
-		}
+//		} else {
+//			session.getTransaction().commit();
+//
+//			System.out.println("User doesn't exist");
+//
+//		}
 
 	}
 

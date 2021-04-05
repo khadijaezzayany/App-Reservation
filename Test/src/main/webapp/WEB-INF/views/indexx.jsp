@@ -478,8 +478,8 @@
 															</div>
 														</div>
 														<div class="nk-wg1-action">
-															<a href="typeReser"
-																class="link"><span>Account Setting</span> <em
+															<a href="TypeOfReservation"
+																class="link"><span> Setting Type Reservation</span> <em
 																class="icon ni ni-chevron-right"></em></a>
 														</div>
 													</div>
@@ -618,7 +618,7 @@
 														</div>
 														<div class="nk-wg1-action">
 															<a href="listUsers"
-																class="link"><span>Manage Subscription</span> <em
+																class="link"><span>Manage Users</span> <em
 																class="icon ni ni-chevron-right"></em></a>
 														</div>
 													</div>

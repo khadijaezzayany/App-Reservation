@@ -54,13 +54,7 @@ public class User {
 		this.accepte = accepte;
 	}
 
-	public boolean isAccepte() {
-		return accepte;
-	}
 
-	public void setAccepte(boolean accepte) {
-		this.accepte = accepte;
-	}
 
 	public User(Long id, String firstName, String lastName, String email, String password, String phone, Role role) {
 		super();
@@ -83,6 +77,13 @@ public class User {
 		this.role = role;
 	}
 
+	public boolean isAccepte() {
+		return accepte;
+	}
+
+	public void setAccepte(boolean accepte) {
+		this.accepte = accepte;
+	}
 	public Long getId() {
 		return id;
 	}

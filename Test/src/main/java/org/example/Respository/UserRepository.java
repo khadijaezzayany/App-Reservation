@@ -17,7 +17,7 @@ public class UserRepository {
 	public User getUserByEmail(String email) {
 		User user;
 		session = HibernateUtil.getSession();
-		//session.beginTransaction();
+		// session.beginTransaction();
 		Query query = session.createQuery("from User u where u.email=:email");
 		query.setParameter("email", email);
 		try {
@@ -32,15 +32,21 @@ public class UserRepository {
 		}
 
 	}
-	
 
-	
-	
-	   public List<User> listAllStudents() {
-	        session = HibernateUtil.getSession();
-	        session.beginTransaction();
-	        List<User> userList = session.createQuery("From User  where role.roleName='Student'").list();
-	        session.getTransaction().commit();
-	        return userList;
-	    }
+	public List<User> listAllStudents() {
+		session = HibernateUtil.getSession();
+		session.beginTransaction();
+		List<User> userList = session.createQuery("From User  where role.roleName='Student'").list();
+		session.getTransaction().commit();
+		return userList;
+	}
+
+	public List<User> listAllStudentsAccp() {
+		session = HibernateUtil.getSession();
+		session.beginTransaction();
+		List<User> userList = session.createQuery("From User  WHERE accepte = 1 AND role.roleName='Student'").list();
+		session.getTransaction().commit();
+		return userList;
+	}
+
 }

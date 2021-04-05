@@ -15,7 +15,7 @@
 <!-- Fav Icon  -->
 <link rel="shortcut icon" href="./images/favicon.png">
 <!-- Page Title  -->
-<title>List All Users</title>
+<title>Type of reservation</title>
 <!-- StyleSheets  -->
 <link rel="stylesheet"
 	href="<c:url value="/resources/css/dashlite.css?ver=1.4.0"/>">
@@ -279,6 +279,13 @@
 									</div>
 									<!-- .nk-block-head -->
 									<div class="nk-block">
+										<form action="Addtype" method="post">
+			<label>Type Reservation :  </label>
+			<input type="text" name="typeRes">
+			<label>Number of places : </label>
+			<input type="text" name="nomberPlaces">
+			<input type="submit"> 
+		</form>
 										<div class="card card-bordered">
 											<table class="table table-tranx table-billing">
 												<thead>
@@ -293,7 +300,7 @@
 													</tr>
 												</thead>
 												<tbody>
-													<c:forEach var="typeR" items="${user}">
+													<c:forEach var="typeR" items="${typeRe}">
 
 														<tr>
 
@@ -305,7 +312,7 @@
 																</form>
 																<form action="DispalyEditType" method="post">
 																	<input type="hidden" value="${typeR.id}" name="id" />
-																	<input type="submit" value="update" />
+																	<input type="submit"  value="update" />
 																</form></td>
 
 

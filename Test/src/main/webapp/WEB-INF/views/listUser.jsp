@@ -265,17 +265,13 @@
 
 										<div class="nk-block-between-md g-4">
 											<div class="nk-block-head-content">
-												<h2 class="nk-block-title fw-normal">List of all users</h2>
-												<div class="nk-block-des">
-													<p>Here is all users </p>
-												</div>
+												<h2 class="nk-block-title fw-normal">List
+													préinscription</h2>
+												<div class="nk-block-des"></div>
 											</div>
 											<div class="nk-block-head-content">
 												<ul class="nk-block-tools gx-3">
-													<!-- <li><a href="#"
-														class="btn btn-white btn-dim btn-outline-primary"><em
-															class="icon ni ni-download-cloud"></em><span><span
-																class="d-none d-sm-inline-block">Get</span> Statement</span></a></li> -->
+
 												</ul>
 											</div>
 										</div>
@@ -306,7 +302,7 @@
 
 
 														<th class="tb-tnx-info">Phone</th>
-														<th class="tb-tnx-info">Password</th>
+														<th>Action</th>
 
 													</tr>
 													<!-- .tb-tnx-head -->
@@ -322,180 +318,66 @@
 
 															<td>${ tempUser.email }</td>
 															<td>${ tempUser.phone }</td>
-															<td>${ tempUser.password }</td>
-															<%-- 	<td>${ tempUser.phone }</td>
-						<td>${ tempUser.role.roleName }</td> --%>
-															<%-- 	<td>
-							<form action="deleteUser" method="post">
-								<input type="hidden" value="${tempUser.id}" name="id"/>
-								<input type="submit" value="Delete"/>
-							</form>
-						</td> --%>
+															<td><a href="Test/listUsers?idAccept=${ tempUser.id }" onclick="if(!(confirm(Are you sure for accept this inscription?)))return false">
+															Accept</a> 
+															<a href="Test/listUsers?idRefuse=${ tempUser.id }">Refuse</a></td>
+
 
 														</tr>
-														<!-- <tr class="tb-tnx-item">
-                                                        <td class="tb-tnx-id">
-                                                            <a href="#"><span>4947</span></a>
-                                                        </td>
-                                                        <td class="tb-tnx-info">
-                                                            <div class="tb-tnx-desc">
-                                                                <span class="title">Enterprize Year Subscrition</span>
-                                                            </div>
-                                                            <div class="tb-tnx-date">
-                                                                <span class="date">10-05-2019</span>
-                                                                <span class="date">10-13-2019</span>
-                                                            </div>
-                                                        </td>
-                                                        <td class="tb-tnx-amount">
-                                                            <div class="tb-tnx-total">
-                                                                <span class="amount">$599.00</span>
-                                                            </div>
-                                                            <div class="tb-tnx-status">
-                                                                <span class="badge badge-dot badge-warning">Due</span>
-                                                            </div>
-                                                        </td>
-                                                    </tr>.tb-tnx-item
-                                                    <tr class="tb-tnx-item">
-                                                        <td class="tb-tnx-id">
-                                                            <a href="#"><span>4904</span></a>
-                                                        </td>
-                                                        <td class="tb-tnx-info">
-                                                            <div class="tb-tnx-desc">
-                                                                <span class="title">Maintenance Year Subscription</span>
-                                                            </div>
-                                                            <div class="tb-tnx-date">
-                                                                <span class="date">06-19-2019</span>
-                                                                <span class="date">06-26-2019</span>
-                                                            </div>
-                                                        </td>
-                                                        <td class="tb-tnx-amount">
-                                                            <div class="tb-tnx-total">
-                                                                <span class="amount">$99.00</span>
-                                                            </div>
-                                                            <div class="tb-tnx-status"><span class="badge badge-dot badge-success">Paid</span></div>
-                                                        </td>
-                                                    </tr>.tb-tnx-item
-                                                    <tr class="tb-tnx-item">
-                                                        <td class="tb-tnx-id">
-                                                            <a href="#"><span>4829</span></a>
-                                                        </td>
-                                                        <td class="tb-tnx-info">
-                                                            <div class="tb-tnx-desc">
-                                                                <span class="title">Enterprize Year Subscrition</span>
-                                                            </div>
-                                                            <div class="tb-tnx-date">
-                                                                <span class="date">10-04-2018</span>
-                                                                <span class="date">10-12-2018</span>
-                                                            </div>
-                                                        </td>
-                                                        <td class="tb-tnx-amount">
-                                                            <div class="tb-tnx-total">
-                                                                <span class="amount">$599.00</span>
-                                                            </div>
-                                                            <div class="tb-tnx-status"><span class="badge badge-dot badge-success">Paid</span></div>
-                                                        </td>
-                                                    </tr>.tb-tnx-item
-                                                    <tr class="tb-tnx-item">
-                                                        <td class="tb-tnx-id">
-                                                            <a href="#"><span>4830</span></a>
-                                                        </td>
-                                                        <td class="tb-tnx-info">
-                                                            <div class="tb-tnx-desc">
-                                                                <span class="title">Enterprize Anniversary Subscription</span>
-                                                            </div>
-                                                            <div class="tb-tnx-date">
-                                                                <span class="date">12-04-2018</span>
-                                                                <span class="date">14-12-2018</span>
-                                                            </div>
-                                                        </td>
-                                                        <td class="tb-tnx-amount">
-                                                            <div class="tb-tnx-total">
-                                                                <span class="amount">$399.00</span>
-                                                            </div>
-                                                            <div class="tb-tnx-status"><span class="badge badge-dot badge-success">Paid</span></div>
-                                                        </td>
-                                                    </tr>.tb-tnx-item
-                                                    <tr class="tb-tnx-item">
-                                                        <td class="tb-tnx-id">
-                                                            <a href="#"><span>4840</span></a>
-                                                        </td>
-                                                        <td class="tb-tnx-info">
-                                                            <div class="tb-tnx-desc">
-                                                                <span class="title">Enterprize Coverage Subscription</span>
-                                                            </div>
-                                                            <div class="tb-tnx-date">
-                                                                <span class="date">12-08-2018</span>
-                                                                <span class="date">13-22-2018</span>
-                                                            </div>
-                                                        </td>
-                                                        <td class="tb-tnx-amount">
-                                                            <div class="tb-tnx-total">
-                                                                <span class="amount">$99.00</span>
-                                                            </div>
-                                                            <div class="tb-tnx-status"><span class="badge badge-dot badge-danger">Cancel</span></div>
-                                                        </td>
-                                                    </tr>.tb-tnx-item
-                                                    <tr class="tb-tnx-item">
-                                                        <td class="tb-tnx-id">
-                                                            <a href="#"><span>4844</span></a>
-                                                        </td>
-                                                        <td class="tb-tnx-info">
-                                                            <div class="tb-tnx-desc">
-                                                                <span class="title">Manual Subscription Adjustments</span>
-                                                            </div>
-                                                            <div class="tb-tnx-date">
-                                                                <span class="date">12-08-2018</span>
-                                                                <span class="date">13-22-2018</span>
-                                                            </div>
-                                                        </td>
-                                                        <td class="tb-tnx-amount">
-                                                            <div class="tb-tnx-total">
-                                                                <span class="amount">$99.00</span>
-                                                            </div>
-                                                            <div class="tb-tnx-status"><span class="badge badge-dot badge-success">Paid</span></div>
-                                                        </td>
-                                                    </tr>.tb-tnx-item
-                                                    <tr class="tb-tnx-item">
-                                                        <td class="tb-tnx-id">
-                                                            <a href="#"><span>4847</span></a>
-                                                        </td>
-                                                        <td class="tb-tnx-info">
-                                                            <div class="tb-tnx-desc">
-                                                                <span class="title">Automatic Subscription Adjustments</span>
-                                                            </div>
-                                                            <div class="tb-tnx-date">
-                                                                <span class="date">12-08-2018</span>
-                                                                <span class="date">13-22-2018</span>
-                                                            </div>
-                                                        </td>
-                                                        <td class="tb-tnx-amount">
-                                                            <div class="tb-tnx-total">
-                                                                <span class="amount">$99.00</span>
-                                                            </div>
-                                                            <div class="tb-tnx-status"><span class="badge badge-dot badge-success">Paid</span></div>
-                                                        </td>
-                                                    </tr> -->
-														<!-- .tb-tnx-item -->
-														<!--   <tr class="tb-tnx-item">
-                                                        <td class="tb-tnx-id">
-                                                            <a href="#"><span>4748</span></a>
-                                                        </td>
-                                                        <td class="tb-tnx-info">
-                                                            <div class="tb-tnx-desc">
-                                                                <span class="title">Tiered Subscription</span>
-                                                            </div>
-                                                            <div class="tb-tnx-date">
-                                                                <span class="date">12-08-2018</span>
-                                                                <span class="date">13-22-2018</span>
-                                                            </div>
-                                                        </td>
-                                                        <td class="tb-tnx-amount">
-                                                            <div class="tb-tnx-total">
-                                                                <span class="amount">$99.00</span>
-                                                            </div>
-                                                            <div class="tb-tnx-status"><span class="badge badge-dot badge-success">Paid</span></div>
-                                                        </td>
-                                                    </tr>.tb-tnx-item -->
+
+													</c:forEach>
+
+												</tbody>
+
+											</table>
+										</div>
+										<h2 class="nk-block-title fw-normal">List of all users</h2>
+										<p>Here is all users</p>
+										<div class="card card-bordered">
+
+
+											<table class="table table-tranx table-billing">
+												<thead>
+													<tr class="tb-tnx-head">
+														<th class="tb-tnx-info">First Name</th>
+														<!--      <span class="tb-tnx-desc d-none d-sm-inline-block">
+                                                                <span>User Name</span>
+                                                            </span>
+                                                            <span class="tb-tnx-date d-md-inline-block d-none">
+                                                                <span class="d-md-none">Date</span>
+                                                                <span class="d-none d-md-block">
+                                                                    <span>Date Reservation</span>
+                                                                    <span>Type Reservation</span>
+                                                                </span>
+                                                            </span>
+                                                      -->
+														<th class="tb-tnx-info">Last Name</th>
+														<th class="tb-tnx-info">Role</th>
+
+														<th class="tb-tnx-info">Email</th>
+
+
+
+														<th class="tb-tnx-info">Phone</th>
+
+													</tr>
+													<!-- .tb-tnx-head -->
+												</thead>
+												<tbody>
+													<c:forEach var="tempUser" items="${userAcc}">
+
+														<tr>
+
+															<td>${ tempUser.firstName }</td>
+															<td>${ tempUser.lastName }</td>
+															<td>${ tempUser.role.roleName }</td>
+
+															<td>${ tempUser.email }</td>
+															<td>${ tempUser.phone }</td>
+
+
+														</tr>
+
 													</c:forEach>
 
 												</tbody>

@@ -1,8 +1,10 @@
 package org.example.controller;
 
 import org.example.Dao.RoleDAOImp;
+import org.example.Dao.StudentDAOImp;
 import org.example.Dao.UserDAOImp;
 import org.example.entities.Role;
+import org.example.entities.Student;
 import org.example.entities.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -18,6 +20,9 @@ public class SingUpController {
 	private RoleDAOImp roleDaoImp;
 	@Autowired
 	private UserDAOImp userDoaImp;
+	
+	@Autowired
+	private StudentDAOImp studentDoaImp;
 	// Get From from server for User PAR DEFAUT (GET)
 	@RequestMapping("register")
 	public String register(Model model) {
@@ -27,11 +32,11 @@ public class SingUpController {
 	}
 
 	@RequestMapping(value = "registerProcess", method = RequestMethod.POST)
-	public String doRegister(@ModelAttribute("user") User us) {
+	public String doRegister(@ModelAttribute("user") Student us) {
 		Role role = roleDaoImp.getRoleById(2L);
 		us.setRole(role);
 		us.setAccepte(false);
-		userDoaImp.addUser(us);
+		studentDoaImp.addStudent(us);
 		System.out.println(us.toString());
 		//redirect for Url not for name of jsp file
 		return "redirect:/";
