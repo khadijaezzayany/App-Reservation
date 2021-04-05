@@ -1,6 +1,7 @@
 package org.example.controller;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 import org.example.Dao.UserDAO;
 import org.example.Respository.ReservationRepository;
@@ -29,39 +30,52 @@ public class LoginController {
 		return "login";
 	}
 
-	@RequestMapping(value = "/Account", method = RequestMethod.POST)
+	@RequestMapping(value = "/Account")
 	public String account(HttpServletRequest req, ModelMap modelMap) {
 		UserRepository userRep = new UserRepository();
 		String email = req.getParameter("email");
 		String pass = req.getParameter("pass");
-
-		user = userRep.getUserByEmail(email);
-
-		if (user.getPassword().equals(pass) && user.isAccepte()) {
-		
-
-			if (user.getRole().getRoleName().equals("Admin")) {
-//				List<User> theUser = userDao.listUser();
-//				modelMap.put("user", theUser);
-				//modelMap.put("detail",LoginController.user);
+	  if (req.getSession().getAttribute("id") !=null){
+		  long id = (Long) req.getSession().getAttribute("id");
+		    User user = userDao.getUserById(id);
+		    if (user.getRole().getRoleName().equals("Admin")) {
 				return "indexx";
 
 			} else if (user.getRole().getRoleName().equals("Student")) {
-				// userDao.getUserById(user.getId());
-
-//				List<Reservation> hestRiserv = reservationRepository.getReservationByUser(LoginController.user);
-//
-//				modelMap.put("histRes", hestRiserv);
 
 				return "student";
+			} 
+		    
+	  }else {
+		  user = userRep.getUserByEmail(email);
+		    //if sesion is null redirection
+		  
+			if (user.getPassword().equals(pass) && user.isAccepte()) {
+				//Open a HttpSession
+				HttpSession hSession = req.getSession(true);
+				//Store the id of the user in the session
+				hSession.setAttribute("id", user.getId());
+
+
+				if (user.getRole().getRoleName().equals("Admin")) {
+					return "indexx";
+
+				} else if (user.getRole().getRoleName().equals("Student")) {
+
+					return "student";
+				}
+
+
+			} else {
+				return "redirect:/login";
 			}
 
-		} else {
-			return "redirect:/login";
-		}
 
+	  }
 		return "redirect:/login";
 
+		
 	}
+	    
 
 }

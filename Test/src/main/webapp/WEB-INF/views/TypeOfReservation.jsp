@@ -24,6 +24,17 @@
 </head>
 
 <body class="nk-body npc-subscription has-aside ui-clean ">
+<%
+//delete cash
+response.setHeader("Cache-Control","no-cache, no-store");
+response.setHeader("Pragma","no-cache");
+response.setDateHeader ("Expires", 0);
+
+    //if sesion is null redirection
+    if (request.getSession().getAttribute("id") == null){
+        response.sendRedirect("");
+    }
+%>
 	<div class="nk-app-root">
 		<!-- main @s -->
 		<div class="nk-main ">

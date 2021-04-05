@@ -7,6 +7,7 @@ import javax.servlet.http.HttpServletRequest;
 
 import org.example.Dao.ReservationDAOImp;
 import org.example.Dao.UserDAOImp;
+import org.example.Respository.ReservationRepository;
 import org.example.Respository.SentEmail;
 import org.example.Respository.UserRepository;
 import org.example.entities.Reservation;
@@ -27,6 +28,9 @@ public class AdminController {
 	@Autowired
 	private ReservationDAOImp reservationDaoImp;
 
+	@Autowired
+	private ReservationRepository reservationRepo;
+
 	@RequestMapping(value = "deleteUser", method = RequestMethod.POST)
 	public String deleteUser(HttpServletRequest request) {
 		long id = Long.parseLong(request.getParameter("id"));
@@ -45,9 +49,7 @@ public class AdminController {
 			userDaoImp.updateUser(user);
 			SentEmail.sendEmail(user.getEmail(), "You're accepted");
 
-
-		}
-		else if (req.getParameter("idRefuse") != null) {
+		} else if (req.getParameter("idRefuse") != null) {
 			long id = Long.parseLong(req.getParameter("idRefuse"));
 			User user = userDaoImp.getUserById(id);
 			SentEmail.sendEmail(user.getEmail(), "You're refused");
@@ -67,10 +69,43 @@ public class AdminController {
 	}
 
 	@RequestMapping(value = "histReservation")
-	public String historiqueReservation(ModelMap modelMap) {
+	public String historiqueReservation(ModelMap modelMap, HttpServletRequest req) {
+
+		if (req.getParameter("idAccept") != null) {
+			long id = Long.parseLong(req.getParameter("idAccept"));
+			Reservation reservation = reservationDaoImp.getReservationById(id);
+
+			reservation.setConfirmation(true);
+			reservationDaoImp.updateReservation(reservation);
+			// SentEmail.sendEmail(reservation.getEmail(), "You're accepted");
+
+		} else if (req.getParameter("idRefuse") != null) {
+			long id = Long.parseLong(req.getParameter("idRefuse"));
+			Reservation reservation = reservationDaoImp.getReservationById(id);
+			// SentEmail.sendEmail(user.getEmail(), "You're refused");
+
+			reservation.setConfirmation(false);
+			reservationDaoImp.updateReservation(reservation);
+
+		}
+		List<Reservation> theReservations = reservationRepo.listReservationToday();
+
+		if (req.getParameter("idAcceptAll")!= null) {
+
+			for (int i = 0; i < theReservations.size(); i++) {
+				Reservation reservation = theReservations.get(i);
+				System.out.println(reservation.getUser().getFirstName());
+				reservation.setConfirmation(true);
+				reservationDaoImp.updateReservation(reservation);
+			}
+
+		}
+		modelMap.put("histReservation", theReservations);
+
 		List<Reservation> theReservation = reservationDaoImp.listReservation();
 		modelMap.put("histRes", theReservation);
 		return "payments";
+
 	}
 //	@RequestMapping(value = "indexx")
 //	public String indexx() {

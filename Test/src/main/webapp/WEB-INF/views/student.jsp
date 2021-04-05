@@ -10,6 +10,17 @@
 <title>Insert title here</title>
 </head>
 <body>
+<%
+//delete cash
+response.setHeader("Cache-Control","no-cache, no-store");
+response.setHeader("Pragma","no-cache");
+response.setDateHeader ("Expires", 0);
+
+    //if sesion is null redirection
+    if (request.getSession().getAttribute("id") == null){
+        response.sendRedirect("");
+    }
+%>
 	<h1>Student Page</h1>
 <!-- 	<a href="update"><button>Update</button></a>
  -->	<a href="addResBut"><button>Add Reservation</button></a>

@@ -10,6 +10,17 @@
 	href="${pageContext.request.contextPath}/resoures/css/style.css" />
 </head>
 <body>
+<%
+//delete cash
+response.setHeader("Cache-Control","no-cache, no-store");
+response.setHeader("Pragma","no-cache");
+response.setDateHeader ("Expires", 0);
+
+    //if sesion is null redirection
+    if (request.getSession().getAttribute("id") == null){
+        response.sendRedirect("");
+    }
+%>
 	<div id="warepper">
 		<div id="header">
 			<h2>List of Historique</h2>
