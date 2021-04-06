@@ -378,7 +378,7 @@ response.setDateHeader ("Expires", 0);
 	<!-- app-root @e -->
 	<!-- JavaScript -->
 	<script src="<c:url value="/resources/js/bundle.js?ver=1.4.0"/>"></script>
-	<script src="./assets/js/scripts.js?ver=1.4.0"></script>
+	<script src="<c:url value="/resources/js/scripts.js?ver=1.4.0"/>"></script>
 </body>
 
 </html>
