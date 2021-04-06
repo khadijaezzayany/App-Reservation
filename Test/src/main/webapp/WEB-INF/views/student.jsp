@@ -189,7 +189,7 @@ response.setDateHeader ("Expires", 0);
 															class="sub-text">info@softnio.com</span>
 													</div>
 													<div class="user-action">
-														<a class="btn btn-icon mr-n2"
+												<a class="btn btn-icon mr-n2"
 															href="html/subscription/profile-setting.html"><em
 															class="icon ni ni-setting"></em></a>
 													</div>
@@ -441,6 +441,7 @@ response.setDateHeader ("Expires", 0);
 									<div class="nk-block-head nk-block-head-lg">
 										<div class="nk-block-between-md g-4">
 											<div class="nk-block-head-content">
+											<a href="Test/logout"> <button>Logout</button> </a>
 												<h2 class="nk-block-title fw-normal">Welcome, Abu Bin
 													Ishtiyak</h2>
 												<div class="nk-block-des">

@@ -21,7 +21,7 @@
 <!-- Fav Icon  -->
 <link rel="shortcut icon" href="./images/favicon.png">
 <!-- Page Title  -->
-<title>Admin Dashboard   </title>
+<title>Admin Dashboard</title>
 <!-- StyleSheets  -->
 <link rel="stylesheet"
 	href="<c:url value="/resources/css/dashlite.css?ver=1.4.0"/>">
@@ -30,7 +30,7 @@
 </head>
 
 <body class="nk-body npc-subscription has-aside ui-clean ">
-<%-- <%
+	<%-- <%
 //delete cash
 response.setHeader("Cache-Control","no-cache, no-store");
 response.setHeader("Pragma","no-cache");
@@ -50,15 +50,15 @@ response.setDateHeader ("Expires", 0);
 					<div class="container-lg wide-xl">
 						<div class="nk-header-wrap">
 							<div class="nk-header-brand">
-							    <a href="html/subscription/index.html" class="logo-link">
-                                    <img class="logo-light logo-img" 
-                                    src="<c:url value="/resources/images/logo.png"/>"
-                                     srcset="<c:url value="/resources/images/logo-dark.png"/>"  alt="logo">
-                                    <img class="logo-dark logo-img" 
-                                      src="<c:url value="/resources/images/logo-dark.png"/>"
-                                    srcset="<c:url value="/resources/images/logo-dark.png"/>" alt="logo-dark">
-                                    <span class="nio-version">Subscription</span>
-                                </a>
+								<a href="html/subscription/index.html" class="logo-link"> <img
+									class="logo-light logo-img"
+									src="<c:url value="/resources/images/logo.png"/>"
+									srcset="<c:url value="/resources/images/logo-dark.png"/>"
+									alt="logo"> <img class="logo-dark logo-img"
+									src="<c:url value="/resources/images/logo-dark.png"/>"
+									srcset="<c:url value="/resources/images/logo-dark.png"/>"
+									alt="logo-dark"> <span class="nio-version">Subscription</span>
+								</a>
 							</div>
 							<!-- .nk-header-brand -->
 							<div class="nk-header-tools">
@@ -84,6 +84,7 @@ response.setDateHeader ("Expires", 0);
 													<div class="user-info">
 														<span class="lead-text">Abu Bin Ishtiyak</span> <span
 															class="sub-text">info@softnio.com</span>
+
 													</div>
 													<div class="user-action">
 														<a class="btn btn-icon mr-n2"
@@ -235,9 +236,8 @@ response.setDateHeader ("Expires", 0);
 										<li class="nk-menu-heading">
 											<h6 class="overline-title">Menu</h6>
 										</li>
-										<li class="nk-menu-item"><a
-											href="indexx" class="nk-menu-link">
-												<span class="nk-menu-icon"><em
+										<li class="nk-menu-item"><a href="indexx"
+											class="nk-menu-link"> <span class="nk-menu-icon"><em
 													class="icon ni ni-dashboard"></em></span> <span
 												class="nk-menu-text">Dashboard</span>
 										</a></li>
@@ -268,7 +268,7 @@ response.setDateHeader ("Expires", 0);
 										<!-- <li class="nk-menu-heading">
 											<h6 class="overline-title">See Others</h6>
 										</li> -->
-								<!-- 		<li class="nk-menu-item"><a href="#" class="nk-menu-link">
+										<!-- 		<li class="nk-menu-item"><a href="#" class="nk-menu-link">
 												<span class="nk-menu-icon"><em
 													class="icon ni ni-files"></em></span> <span class="nk-menu-text">Pre-Built
 													Pages</span>
@@ -309,7 +309,7 @@ response.setDateHeader ("Expires", 0);
 											</ul></li> -->
 									</ul>
 									<!-- Menu -->
-				<!-- 					<ul class="nk-menu nk-menu-sm">
+									<!-- 					<ul class="nk-menu nk-menu-sm">
 										Menu
 										<li class="nk-menu-heading"><span>Help Center</span></li>
 										<li class="nk-menu-item"><a
@@ -339,7 +339,14 @@ response.setDateHeader ("Expires", 0);
 									<div class="nk-block-head nk-block-head-lg">
 										<div class="nk-block-between-md g-4">
 											<div class="nk-block-head-content">
-												<h2 class="nk-block-title fw-normal">Welcome, <c:out value="${fn}"></c:out></h2>
+												<a href="Test/logout">
+													<button>Logout</button>
+												</a>
+
+												<h2 class="nk-block-title fw-normal">
+													Welcome,
+													<c:out value="${fn}"></c:out>
+												</h2>
 												<div class="nk-block-des">
 													<p>Welcome to our dashboard. Manage your account and
 														your subscriptions.</p>
@@ -425,7 +432,7 @@ response.setDateHeader ("Expires", 0);
 														<div class="nk-wg1-action">
 															<!-- <a href="listUsers" class="link"><span>Manage
 																	Your Account</span> <em class="icon ni ni-chevron-right"></em></a> -->
-														
+
 														</div>
 													</div>
 												</div>
@@ -484,12 +491,13 @@ response.setDateHeader ("Expires", 0);
 															</div>
 															<div class="nk-wg1-text">
 																<h5 class="title">Type Reservation Setting</h5>
-																<p>You have full control to manage your type of reservation.</p>
+																<p>You have full control to manage your type of
+																	reservation.</p>
 															</div>
 														</div>
 														<div class="nk-wg1-action">
-															<a href="Test/typeReser"
-																class="link"><span> Setting Type Reservation</span> <em
+															<a href="Test/typeReser" class="link"><span>
+																	Setting Type Reservation</span> <em
 																class="icon ni ni-chevron-right"></em></a>
 														</div>
 													</div>
@@ -553,7 +561,7 @@ response.setDateHeader ("Expires", 0);
 															</div>
 															<div class="nk-wg1-text">
 																<h5 class="title">Reservation History</h5>
-																<p>Check out all  reservation history</p>
+																<p>Check out all reservation history</p>
 															</div>
 														</div>
 														<div class="nk-wg1-action">
@@ -623,13 +631,12 @@ response.setDateHeader ("Expires", 0);
 															</div>
 															<div class="nk-wg1-text">
 																<h5 class="title">List All Of Users</h5>
-																<p>Check all your  of uses and manage .</p>
+																<p>Check all your of uses and manage .</p>
 															</div>
 														</div>
 														<div class="nk-wg1-action">
-															<a href="Test/listUsers"
-																class="link"><span>Manage Users</span> <em
-																class="icon ni ni-chevron-right"></em></a>
+															<a href="Test/listUsers" class="link"><span>Manage
+																	Users</span> <em class="icon ni ni-chevron-right"></em></a>
 														</div>
 													</div>
 												</div>
@@ -639,7 +646,7 @@ response.setDateHeader ("Expires", 0);
 										<!-- .row -->
 									</div>
 									<!-- .nk-block -->
-			<!-- 						<div class="nk-block">
+									<!-- 						<div class="nk-block">
 										<div class="card card-bordered">
 											<div class="card-inner-group">
 												<div class="card-inner">
@@ -674,7 +681,7 @@ response.setDateHeader ("Expires", 0);
 										</div>
 									</div> -->
 									<!-- .nk-block -->
-							<%-- 		<div class="nk-block">
+									<%-- 		<div class="nk-block">
 										<div class="card card-bordered">
 											<div class="card-inner">
 												<div class="nk-help">
@@ -762,7 +769,7 @@ response.setDateHeader ("Expires", 0);
 										</div>
 									</div> --%>
 									<!-- .nk-block -->
-							<!-- 		<div class="nk-block">
+									<!-- 		<div class="nk-block">
 										<div class="card card-bordered">
 											<div class="card-inner card-inner-md">
 												<div class="card-title-group">

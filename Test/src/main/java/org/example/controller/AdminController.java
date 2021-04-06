@@ -107,6 +107,13 @@ public class AdminController {
 		return "payments";
 
 	}
+//	@RequestMapping(value = "logout")
+//    public String logout(HttpServletRequest request) {
+//        System.out.println("logout()");
+//        request.getSession().setMaxInactiveInterval(0);
+//        request.getSession().invalidate();
+//        return "/";
+//    }
 //	@RequestMapping(value = "indexx")
 //	public String indexx() {
 //		return "redirect:/Account";
