@@ -24,7 +24,7 @@
 </head>
 
 <body class="nk-body npc-subscription has-aside ui-clean ">
-<%
+<%-- <%
 //delete cash
 response.setHeader("Cache-Control","no-cache, no-store");
 response.setHeader("Pragma","no-cache");
@@ -34,7 +34,7 @@ response.setDateHeader ("Expires", 0);
     if (request.getSession().getAttribute("id") == null){
         response.sendRedirect("");
     }
-%>
+%> --%>
 	<div class="nk-app-root">
 		<!-- main @s -->
 		<div class="nk-main ">
@@ -397,7 +397,7 @@ response.setDateHeader ("Expires", 0);
 	</div>
 	<!-- app-root @e -->
 	<!-- JavaScript -->
-	<script src="./assets/js/bundle.js?ver=1.4.0"></script>
+	<script src="<c:url value="/resources/js/bundle.js?ver=1.4.0"/>"></script>
 	<script src="./assets/js/scripts.js?ver=1.4.0"></script>
 </body>
 

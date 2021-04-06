@@ -24,17 +24,17 @@
 </head>
 
 <body class="nk-body npc-subscription has-aside ui-clean ">
-<%
-//delete cash
-response.setHeader("Cache-Control","no-cache, no-store");
-response.setHeader("Pragma","no-cache");
-response.setDateHeader ("Expires", 0);
+	<%-- 	<%
+	//delete cash
+	response.setHeader("Cache-Control", "no-cache, no-store");
+	response.setHeader("Pragma", "no-cache");
+	response.setDateHeader("Expires", 0);
 
-    //if sesion is null redirection
-    if (request.getSession().getAttribute("id") == null){
-        response.sendRedirect("");
-    }
-%>
+	//if sesion is null redirection
+	if (request.getSession().getAttribute("id") == null) {
+		response.sendRedirect("");
+	}
+	%> --%>
 	<div class="nk-app-root">
 		<!-- main @s -->
 		<div class="nk-main ">
@@ -291,22 +291,18 @@ response.setDateHeader ("Expires", 0);
 									<!-- .nk-block-head -->
 									<div class="nk-block">
 										<form action="Addtype" method="post">
-			<label>Type Reservation :  </label>
-			<input type="text" name="typeRes">
-			<label>Number of places : </label>
-			<input type="text" name="nomberPlaces">
-			<input type="submit"> 
-		</form>
+											<label>Type Reservation : </label> <input type="text"
+												name="typeRes"> <label>Number of places : </label> <input
+												type="text" name="nomberPlaces"> <input
+												type="submit">
+										</form>
 										<div class="card card-bordered">
 											<table class="table table-tranx table-billing">
 												<thead>
 													<tr class="tb-tnx-head">
 														<th class="tb-tnx-info">Type Reservation</th>
-
 														<th class="tb-tnx-info">Number of places</th>
 														<th class="tb-tnx-info">Action</th>
-
-
 
 													</tr>
 												</thead>
@@ -323,7 +319,7 @@ response.setDateHeader ("Expires", 0);
 																</form>
 																<form action="DispalyEditType" method="post">
 																	<input type="hidden" value="${typeR.id}" name="id" />
-																	<input type="submit"  value="update" />
+																	<input type="submit" value="update" />
 																</form></td>
 
 

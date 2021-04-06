@@ -38,7 +38,7 @@
                             <form:label path="email">Email</form:label>
                         </td>
                         <td>
-                            <form:input path="email" name="email" id="email"  />
+                            <form:input path="email" name="email" id="email"  pattern="[a-z0-9._%+-]+@[student]+.+[youcode]+.+[ma]{2,}$" />
                         </td>
                     </tr>
                  
@@ -47,7 +47,7 @@
                             <form:label path="phone">Phone</form:label>
                         </td>
                         <td>
-                            <form:input path="phone" name="phone" id="phone"   />
+                            <form:input path="phone" name="phone" id="phone" pattern="[0]{1}[6-7]{1}[0-9]{8}"  />
                         </td>
                     </tr>
                       <tr>
@@ -55,7 +55,7 @@
                             <form:label path="password">Password</form:label>
                         </td>
                         <td>
-                            <form:password path="password" name="password" id="password" />
+                            <form:password path="password" name="password" id="password" pattern="(?=.\d)(?=.[a-z])(?=.*[A-Z]).{8,}" />
                         </td>
                     </tr>
 
