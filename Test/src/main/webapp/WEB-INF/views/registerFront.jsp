@@ -34,7 +34,7 @@
 				</div>
 				<div class="nk-block nk-block-middle nk-auth-body">
 					<div class="brand-logo pb-5">
-						<a href="html/subscription/index.html" class="logo-link"> <img
+						<a href="Test/" class="logo-link"> <img
 							class="logo-light logo-img"
 							src="<c:url value="/resources/images/logo.png"/>"
 							srcset="<c:url value="/resources/images/logo-dark.png"/>"
@@ -121,7 +121,7 @@
 					</div>
 					<div class="form-note-s2 pt-4">
 						Already have an account ? <a
-							href="html/general/pages/auths/auth-login.html"><strong>Sign
+							href="Test/"><strong>Sign
 								in instead</strong></a>
 					</div>
 					<div class="text-center pt-4 pb-3">

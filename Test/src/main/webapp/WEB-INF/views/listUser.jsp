@@ -45,7 +45,7 @@ response.setDateHeader ("Expires", 0);
 					<div class="container-lg wide-xl">
 						<div class="nk-header-wrap">
 							<div class="nk-header-brand">
-								<a href="html/subscription/index.html" class="logo-link"> <img
+								<a href="Test/Account" class="logo-link"> <img
 									class="logo-light logo-img"
 									src="<c:url value="/resources/images/logo.png"/>"
 									srcset="<c:url value="/resources/images/logo-dark.png"/>"
@@ -230,28 +230,28 @@ response.setDateHeader ("Expires", 0);
 										<li class="nk-menu-heading">
 											<h6 class="overline-title">Menu</h6>
 										</li>
-										<li class="nk-menu-item"><a href="indexx"
+										<li class="nk-menu-item"><a href="Test/Account"
 											class="nk-menu-link"> <span class="nk-menu-icon"><em
 													class="icon ni ni-dashboard"></em></span> <span
 												class="nk-menu-text">Dashboard</span>
 										</a></li>
 										<li class="nk-menu-item"><a
-											href="html/subscription/subscriptions.html"
+											href="Test/listUsers"
 											class="nk-menu-link"> <span class="nk-menu-icon"><em
 													class="icon ni ni-file-text"></em></span> <span
-												class="nk-menu-text">My Subscription</span>
+												class="nk-menu-text">List Of All Users</span>
 										</a></li>
 										<li class="nk-menu-item"><a
-											href="html/subscription/payments.html" class="nk-menu-link">
+											href="Test/typeReser" class="nk-menu-link">
 												<span class="nk-menu-icon"><em
 													class="icon ni ni-report-profit"></em></span> <span
-												class="nk-menu-text">List all users</span>
+												class="nk-menu-text">Setting Type Reservation</span>
 										</a></li>
 										<li class="nk-menu-item"><a
-											href="html/subscription/downloads.html" class="nk-menu-link">
+											href="Test/histReservation" class="nk-menu-link">
 												<span class="nk-menu-icon"><em
 													class="icon ni ni-download-cloud"></em></span> <span
-												class="nk-menu-text">Download</span>
+												class="nk-menu-text">Reservation History</span>
 										</a></li>
 										<li class="nk-menu-item"><a
 											href="html/subscription/profile-setting.html"
@@ -259,6 +259,8 @@ response.setDateHeader ("Expires", 0);
 													class="icon ni ni-account-setting"></em></span> <span
 												class="nk-menu-text">Account Setting</span>
 										</a></li>
+											<li class="nk-menu-item"><a href="Test/logout"
+											class="nk-menu-link">Logout </a></li>
 
 									</ul>
 

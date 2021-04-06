@@ -24,7 +24,7 @@
 </head>
 
 <body class="nk-body npc-subscription has-aside ui-clean ">
-<%-- <%
+	<%-- <%
 //delete cash
 response.setHeader("Cache-Control","no-cache, no-store");
 response.setHeader("Pragma","no-cache");
@@ -44,7 +44,7 @@ response.setDateHeader ("Expires", 0);
 					<div class="container-lg wide-xl">
 						<div class="nk-header-wrap">
 							<div class="nk-header-brand">
-								<a href="html/subscription/index.html" class="logo-link"> <img
+								<a href="Test/Account" class="logo-link"> <img
 									class="logo-light logo-img"
 									src="<c:url value="/resources/images/logo.png"/>"
 									srcset="<c:url value="/resources/images/logo-dark.png"/>"
@@ -229,28 +229,25 @@ response.setDateHeader ("Expires", 0);
 										<li class="nk-menu-heading">
 											<h6 class="overline-title">Menu</h6>
 										</li>
-										<li class="nk-menu-item"><a href="indexx"
+										<li class="nk-menu-item"><a href="Test/Account"
 											class="nk-menu-link"> <span class="nk-menu-icon"><em
 													class="icon ni ni-dashboard"></em></span> <span
 												class="nk-menu-text">Dashboard</span>
 										</a></li>
-										<li class="nk-menu-item"><a
-											href="html/subscription/subscriptions.html"
+										<li class="nk-menu-item"><a href="Test/listUsers"
 											class="nk-menu-link"> <span class="nk-menu-icon"><em
 													class="icon ni ni-file-text"></em></span> <span
-												class="nk-menu-text">My Subscription</span>
+												class="nk-menu-text">List Of All Users</span>
 										</a></li>
-										<li class="nk-menu-item"><a
-											href="html/subscription/payments.html" class="nk-menu-link">
-												<span class="nk-menu-icon"><em
+										<li class="nk-menu-item"><a href="Test/typeReser"
+											class="nk-menu-link"> <span class="nk-menu-icon"><em
 													class="icon ni ni-report-profit"></em></span> <span
-												class="nk-menu-text">Reservation History</span>
+												class="nk-menu-text">Setting Type Reservation</span>
 										</a></li>
-										<li class="nk-menu-item"><a
-											href="html/subscription/downloads.html" class="nk-menu-link">
-												<span class="nk-menu-icon"><em
+										<li class="nk-menu-item"><a href="Test/histReservation"
+											class="nk-menu-link"> <span class="nk-menu-icon"><em
 													class="icon ni ni-download-cloud"></em></span> <span
-												class="nk-menu-text">Download</span>
+												class="nk-menu-text">Reservation History</span>
 										</a></li>
 										<li class="nk-menu-item"><a
 											href="html/subscription/profile-setting.html"
@@ -258,6 +255,8 @@ response.setDateHeader ("Expires", 0);
 													class="icon ni ni-account-setting"></em></span> <span
 												class="nk-menu-text">Account Setting</span>
 										</a></li>
+											<li class="nk-menu-item"><a href="Test/logout"
+											class="nk-menu-link">Logout </a></li>
 
 									</ul>
 
@@ -276,11 +275,9 @@ response.setDateHeader ("Expires", 0);
 
 										<div class="nk-block-between-md g-4">
 											<div class="nk-block-head-content">
-												<h2 class="nk-block-title fw-normal">Reservation
-													History</h2>
-												<div class="nk-block-des">
-													<p>Here is all history of reservation</p>
-												</div>
+												<h2 class="nk-block-title fw-normal">Management
+													Reservation and History</h2>
+												
 											</div>
 											<div class="nk-block-head-content">
 												<ul class="nk-block-tools gx-3">
@@ -334,8 +331,11 @@ response.setDateHeader ("Expires", 0);
 
 											</table>
 										</div>
-
+<div class="nk-block-des">
+													<p>Here is all history of reservation</p>
+												</div>
 										<div class="card card-bordered">
+										
 											<table class="table table-tranx table-billing">
 												<thead>
 													<tr class="tb-tnx-head">

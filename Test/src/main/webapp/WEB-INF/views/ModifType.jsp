@@ -254,13 +254,13 @@
 										<li class="nk-menu-heading">
 											<h6 class="overline-title">Menu</h6>
 										</li>
-										<li class="nk-menu-item"><a href="indexx"
+										<li class="nk-menu-item"><a href="Test/Account"
 											class="nk-menu-link"> <span class="nk-menu-icon"><em
 													class="icon ni ni-dashboard"></em></span> <span
 												class="nk-menu-text">Dashboard</span>
 										</a></li>
 										<li class="nk-menu-item"><a
-											href="html/subscription/subscriptions.html"
+											href="Test/listUsers"
 											class="nk-menu-link"> <span class="nk-menu-icon"><em
 													class="icon ni ni-file-text"></em></span> <span
 												class="nk-menu-text">My Subscription</span>
@@ -283,6 +283,8 @@
 													class="icon ni ni-account-setting"></em></span> <span
 												class="nk-menu-text">Account Setting</span>
 										</a></li>
+											<li class="nk-menu-item"><a href="Test/logout"
+											class="nk-menu-link">Logout </a></li>
 
 									</ul>
 

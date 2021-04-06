@@ -32,7 +32,7 @@
                 </div>
                 <div class="nk-block nk-block-middle nk-auth-body">
                     <div class="brand-logo pb-5">
-                      	<a href="html/subscription/index.html" class="logo-link"> <img
+                      	<a href="Test/" class="logo-link"> <img
 									class="logo-light logo-img"
 									src="<c:url value="/resources/images/logo.png"/>"
 									srcset="<c:url value="/resources/images/logo-dark.png"/>"

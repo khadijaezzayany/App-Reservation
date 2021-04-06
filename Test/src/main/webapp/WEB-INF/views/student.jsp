@@ -153,7 +153,7 @@ response.setDateHeader ("Expires", 0);
 					<div class="container-lg wide-xl">
 						<div class="nk-header-wrap">
 							<div class="nk-header-brand">
-								<a href="html/subscription/index.html" class="logo-link"> <img
+								<a href="Test/Account" class="logo-link"> <img
 									class="logo-light logo-img"
 									src="<c:url value="/resources/images/logo.png"/>"
 									srcset="<c:url value="/resources/images/logo-dark.png"/>"
@@ -338,77 +338,26 @@ response.setDateHeader ("Expires", 0);
 										<li class="nk-menu-heading">
 											<h6 class="overline-title">Menu</h6>
 										</li>
-										<li class="nk-menu-item"><a href="indexx"
+										<li class="nk-menu-item"><a href="Test/Account"
 											class="nk-menu-link"> <span class="nk-menu-icon"><em
 													class="icon ni ni-dashboard"></em></span> <span
 												class="nk-menu-text">Dashboard</span>
 										</a></li>
 										<li class="nk-menu-item"><a
-											href="html/subscription/subscriptions.html"
+											href="Test/addResBut"
 											class="nk-menu-link"> <span class="nk-menu-icon"><em
 													class="icon ni ni-file-text"></em></span> <span
-												class="nk-menu-text">My Subscription</span>
+												class="nk-menu-text">Add Reservation</span>
 										</a></li>
 										<li class="nk-menu-item"><a
-											href="html/subscription/payments.html" class="nk-menu-link">
+											href="Test/histResStudent" class="nk-menu-link">
 												<span class="nk-menu-icon"><em
 													class="icon ni ni-report-profit"></em></span> <span
-												class="nk-menu-text">Payment History</span>
+												class="nk-menu-text">Reservation History</span>
 										</a></li>
-										<li class="nk-menu-item"><a
-											href="html/subscription/downloads.html" class="nk-menu-link">
-												<span class="nk-menu-icon"><em
-													class="icon ni ni-download-cloud"></em></span> <span
-												class="nk-menu-text">Download</span>
-										</a></li>
-										<li class="nk-menu-item"><a
-											href="html/subscription/profile-setting.html"
-											class="nk-menu-link"> <span class="nk-menu-icon"><em
-													class="icon ni ni-account-setting"></em></span> <span
-												class="nk-menu-text">Account Setting</span>
-										</a></li>
-										<!-- <li class="nk-menu-heading">
-											<h6 class="overline-title">See Others</h6>
-										</li> -->
-										<!-- 		<li class="nk-menu-item"><a href="#" class="nk-menu-link">
-												<span class="nk-menu-icon"><em
-													class="icon ni ni-files"></em></span> <span class="nk-menu-text">Pre-Built
-													Pages</span>
-										</a>
-											<ul class="nk-menu-sub">
-												<li class="nk-menu-item"><a
-													href="html/subscription/pricing.html" class="nk-menu-link"><span
-														class="nk-menu-text">Pricing</span></a></li>
-												<li class="nk-menu-item"><a
-													href="html/subscription/team-access.html"
-													class="nk-menu-link"><span class="nk-menu-text">Team
-															Access</span></a></li>
-												<li class="nk-menu-item"><a
-													href="html/subscription/profile-activity.html"
-													class="nk-menu-link"><span class="nk-menu-text">Login
-															Activity</span></a></li>
-												<li class="nk-menu-item"><a
-													href="html/subscription/invoices.html" class="nk-menu-link"><span
-														class="nk-menu-text">Invoices <span class="count">(2)</span></span></a></li>
-												<li class="nk-menu-item"><a
-													href="html/subscription/invoice-details.html"
-													class="nk-menu-link"><span class="nk-menu-text">View
-															Invoice</span></a></li>
-												<li class="nk-menu-item"><a
-													href="html/subscription/tickets.html" class="nk-menu-link"><span
-														class="nk-menu-text">Tickets <span class="count">(5)</span></span></a></li>
-												<li class="nk-menu-item"><a
-													href="html/subscription/ticket-details.html"
-													class="nk-menu-link"><span class="nk-menu-text">Ticket
-															Details</span></a></li>
-												<li class="nk-menu-item"><a
-													href="html/subscription/support.html" class="nk-menu-link"><span
-														class="nk-menu-text">Support</span></a></li>
-												<li class="nk-menu-item"><a
-													href="html/subscription/subscriptions-detail.html"
-													class="nk-menu-link"><span class="nk-menu-text">Subscription
-															Details</span></a></li>
-											</ul></li> -->
+										
+											<li class="nk-menu-item"><a href="Test/logout"
+											class="nk-menu-link">Logout </a></li>
 									</ul>
 									<!-- Menu -->
 									<!-- 					<ul class="nk-menu nk-menu-sm">
@@ -441,7 +390,7 @@ response.setDateHeader ("Expires", 0);
 									<div class="nk-block-head nk-block-head-lg">
 										<div class="nk-block-between-md g-4">
 											<div class="nk-block-head-content">
-											<a href="Test/logout"> <button>Logout</button> </a>
+		
 												<h2 class="nk-block-title fw-normal">Welcome, Abu Bin
 													Ishtiyak</h2>
 												<div class="nk-block-des">
