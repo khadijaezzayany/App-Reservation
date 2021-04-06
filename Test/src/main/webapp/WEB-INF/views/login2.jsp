@@ -14,7 +14,7 @@
     <!-- Fav Icon  -->
     <link rel="shortcut icon" href="./images/favicon.png">
     <!-- Page Title  -->
-    <title>Login | DashLite Admin Template</title>
+    <title>Login </title>
     <!-- StyleSheets  -->
     <link rel="stylesheet" href=<c:url value="/resources/css/dashlite.css?ver=1.4.0"/>>
     <link id="skin-default" rel="stylesheet" href=<c:url value="/resources/css/theme.css?ver=1.4.0"/>>
@@ -75,7 +75,7 @@
                             <input class="btn btn-lg btn-primary btn-block" type="submit" value="Sign in">
                         </div>
                     </form><!-- form -->
-                    <div class="form-note-s2 pt-4"> New on our platform? <a href="html/general/pages/auths/auth-register.html">Create an account</a>
+                    <div class="form-note-s2 pt-4"> New on our platform? <a href="Test/register">Create an account</a>
                     </div>
                     <div class="text-center pt-4 pb-3">
                         <h6 class="overline-title overline-title-sap"><span>OR</span></h6>

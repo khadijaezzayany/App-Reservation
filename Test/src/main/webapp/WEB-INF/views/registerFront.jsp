@@ -52,105 +52,73 @@
 							</div>
 						</div>
 					</div>
-			
-									<div class="card card-bordered">
-											<div class="card-inner">
-												<form action="#" class="form-validate is-alter">
-													<div class="row g-gs">
-														<div class="col-md-6">
-															<div class="form-group">
-																<label class="form-label" for="fva-full-name">Full
-																	Name</label>
-																<div class="form-control-wrap">
-																	<input type="text" class="form-control"
-																		id="fva-full-name" name="fva-full-name" required>
-																</div>
-															</div>
-														</div>
-														<div class="col-md-6">
-															<div class="form-group">
-																<label class="form-label" for="fva-email">Email
-																	address</label>
-																<div class="form-control-wrap">
-																	<input type="email" class="form-control" id="fva-email"
-																		name="fva-email" required>
-																</div>
-															</div>
-														</div>
-														<div class="col-md-6">
-															<div class="form-group">
-																<label class="form-label" for="fva-subject">Subject</label>
-																<div class="form-control-wrap">
-																	<input type="text" class="form-control"
-																		id="fva-subject" name="fva-subject" required>
-																</div>
-															</div>
-														</div>
-														<div class="col-md-6">
-															<div class="form-group">
-																<label class="form-label" for="fva-topics">Topics</label>
-																<div class="form-control-wrap ">
-																	<select class="form-control form-select"
-																		id="fva-topics" name="fva-topics"
-																		data-placeholder="Select a option" required>
-																		<option label="empty" value=""></option>
-																		<option value="fva-gq">General Question</option>
-																		<option value="fva-tq">Tachnical Question</option>
-																		<option value="fva-ab">Account &amp; Billing</option>
-																	</select>
-																</div>
-															</div>
-														</div>
-														<div class="col-md-12">
-															<div class="form-group">
-																<label class="form-label" for="fva-message">Message</label>
-																<div class="form-control-wrap">
-																	<textarea class="form-control form-control-sm"
-																		id="fva-message" name="fva-message"
-																		placeholder="Write your message" required></textarea>
-																</div>
-															</div>
-														</div>
-														<div class="col-md-12">
-															<div class="form-group">
-																<label class="form-label">Communication</label>
-																<ul class="custom-control-group g-3 align-center">
-																	<li>
-																		<div class="custom-control custom-checkbox">
-																			<input type="checkbox" class="custom-control-input"
-																				name="fva-com" id="fva-com-email" required>
-																			<label class="custom-control-label"
-																				for="fva-com-email">Email</label>
-																		</div>
-																	</li>
-																	<li>
-																		<div class="custom-control custom-checkbox">
-																			<input type="checkbox" class="custom-control-input"
-																				name="fva-com" id="fva-com-sms" required> <label
-																				class="custom-control-label" for="fva-com-sms">SMS</label>
-																		</div>
-																	</li>
-																	<li>
-																		<div class="custom-control custom-checkbox">
-																			<input type="checkbox" class="custom-control-input"
-																				name="fva-com" id="fva-com-phone" required>
-																			<label class="custom-control-label"
-																				for="fva-com-phone">Phone</label>
-																		</div>
-																	</li>
-																</ul>
-															</div>
-														</div>
-														<div class="col-md-12">
-															<div class="form-group">
-																<button type="submit" class="btn btn-lg btn-primary">Save
-																	Informations</button>
-															</div>
-														</div>
-													</div>
-												</form>
+
+					<div class="card card-bordered">
+						<div class="card-inner">
+							<form action="Test/registerProcess" method="post"
+								class="form-validate is-alter">
+								<div class="row g-gs">
+									<div class="col-md-6">
+										<div class="form-group">
+											<label name="firstName" class="form-label"
+												for="fva-full-name">First Name</label>
+											<div class="form-control-wrap">
+												<input  type="text" class="form-control"
+													id="fva-full-name" name="firstName" required>
 											</div>
 										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="form-group">
+											<label name="lastName" class="form-label" for="fva-full-name">Last
+												Name</label>
+											<div class="form-control-wrap">
+												<input name="lastName" type="text" class="form-control" id="fva-full-name"
+													name="fva-full-name" required>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="form-group">
+											<label name="email" class="form-label" for="fva-full-name">Email</label>
+											<div  class="form-control-wrap">
+												<input name="email" type="email" class="form-control" id="fva-full-name"
+													name="fva-full-name" required   pattern="[a-z0-9._%+-]+@[student]+.+[youcode]+.+[ma]{2,}$">
+											</div>
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="form-group">
+											<label name="phone" class="form-label" for="fva-full-name">Phone</label>
+											<div class="form-control-wrap">
+												<input name="phone" type="text" class="form-control" id="fva-full-name"
+													name="fva-full-name" required  pattern="[0]{1}[6-7]{1}[0-9]{8}">
+											</div>
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="form-group">
+											<label name="password" class="form-label" for="fva-email">Password</label>
+											<div class="form-control-wrap">
+												<input name="password" type="password" class="form-control" id="fva-email"
+													name="fva-email" required>
+											</div>
+										</div>
+									</div>
+
+
+
+
+									<div class="col-md-12">
+										<div class="form-group">
+											<button type="submit" class="btn btn-lg btn-primary">Save
+												Informations</button>
+										</div>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
 					<div class="form-note-s2 pt-4">
 						Already have an account ? <a
 							href="html/general/pages/auths/auth-login.html"><strong>Sign
