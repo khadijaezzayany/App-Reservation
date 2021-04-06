@@ -290,7 +290,7 @@
 									</div>
 									<!-- .nk-block-head -->
 									<div class="nk-block">
-										<form action="Addtype" method="post">
+										<form action="Test/Addtype" method="post">
 											<label>Type Reservation : </label> <input type="text"
 												name="typeRes"> <label>Number of places : </label> <input
 												type="text" name="nomberPlaces"> <input
@@ -313,11 +313,11 @@
 
 															<td>${ typeR.typeRes }</td>
 															<td>${ typeR.nomberPlaces }</td>
-															<td><form action="deleteType" method="post">
+															<td><form action="Test/deleteType" method="post">
 																	<input type="hidden" value="${typeR.id}" name="id" />
 																	<input type="submit" value="Delete" />
 																</form>
-																<form action="DispalyEditType" method="post">
+																<form action="Test/DispalyEditType" method="post">
 																	<input type="hidden" value="${typeR.id}" name="id" />
 																	<input type="submit" value="update" />
 																</form></td>

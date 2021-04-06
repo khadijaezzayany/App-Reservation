@@ -26,7 +26,7 @@ public class LoginController {
 	@RequestMapping(value = "/")
 	public String Login() {
 
-		return "login";
+		return "login2";
 	}
 
 	@RequestMapping(value = "/Account")
@@ -38,7 +38,7 @@ public class LoginController {
 		  long id = (Long) req.getSession().getAttribute("id");
 		    User user = userDao.getUserById(id);
 		    if (user.getRole().getRoleName().equals("Admin")) {
-				return "indexx";
+		    	return "indexx";
 
 			} else if (user.getRole().getRoleName().equals("Student")) {
 
@@ -67,12 +67,12 @@ public class LoginController {
 
 
 			} else {
-				return "redirect:/login";
+				return "redirect:/login2";
 			}
 
 
 	  }
-		return "redirect:/login";
+		return "redirect:/login2";
 
 		
 	}

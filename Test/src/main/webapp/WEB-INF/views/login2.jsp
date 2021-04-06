@@ -32,10 +32,15 @@
                 </div>
                 <div class="nk-block nk-block-middle nk-auth-body">
                     <div class="brand-logo pb-5">
-                        <a href="html/general/index.html" class="logo-link">
-                            <img class="logo-light logo-img logo-img-lg" src="./images/logo.png" srcset="./images/logo2x.png 2x" alt="logo">
-                            <img class="logo-dark logo-img logo-img-lg" src="./images/logo-dark.png" srcset="./images/logo-dark2x.png 2x" alt="logo-dark">
-                        </a>
+                      	<a href="html/subscription/index.html" class="logo-link"> <img
+									class="logo-light logo-img"
+									src="<c:url value="/resources/images/logo.png"/>"
+									srcset="<c:url value="/resources/images/logo-dark.png"/>"
+									alt="logo"> <img class="logo-dark logo-img"
+									src="<c:url value="/resources/images/logo-dark.png"/>"
+									srcset="<c:url value="/resources/images/logo-dark.png"/>"
+									alt="logo-dark"> <span class="nio-version">Subscription</span>
+								</a>
                     </div>
                     <div class="nk-block-head">
                         <div class="nk-block-head-content">
@@ -45,7 +50,7 @@
                             </div>
                         </div>
                     </div><!-- .nk-block-head -->
-                    <form action="Account" method="post">
+                    <form action="Test/Account" method="post">
                         <div class="form-group">
                             <div class="form-label-group">
                                 <label class="form-label" for="default-01">Email or Username</label>
@@ -128,50 +133,10 @@
                             </li>
                         </ul><!-- .nav -->
                     </div>
-                    <div class="mt-3">
-                    </div>
+                 
                 </div><!-- .nk-block -->
             </div><!-- .nk-split-content -->
-            <div class="nk-split-content nk-split-stretch bg-lighter d-flex toggle-break-lg toggle-slide toggle-slide-right" data-content="athPromo" data-toggle-screen="lg" data-toggle-overlay="true">
-                <div class="slider-wrap w-100 w-max-550px p-3 p-sm-5 m-auto">
-                    <div class="slider-init" data-slick='{"dots":true, "arrows":false}'>
-                        <div class="slider-item">
-                            <div class="nk-feature nk-feature-center">
-                                <div class="nk-feature-img">
-                                    <img class="round" src="./images/slides/promo-a.png" srcset="./images/slides/promo-a2x.png 2x" alt="">
-                                </div>
-                                <div class="nk-feature-content py-4 p-sm-5">
-                                    <h4>Dashlite</h4>
-                                    <p>You can start to create your products easily with its user-friendly design & most completed responsive layout.</p>
-                                </div>
-                            </div>
-                        </div><!-- .slider-item -->
-                        <div class="slider-item">
-                            <div class="nk-feature nk-feature-center">
-                                <div class="nk-feature-img">
-                                    <img class="round" src="./images/slides/promo-b.png" srcset="./images/slides/promo-b2x.png 2x" alt="">
-                                </div>
-                                <div class="nk-feature-content py-4 p-sm-5">
-                                    <h4>Dashlite</h4>
-                                    <p>You can start to create your products easily with its user-friendly design & most completed responsive layout.</p>
-                                </div>
-                            </div>
-                        </div><!-- .slider-item -->
-                        <div class="slider-item">
-                            <div class="nk-feature nk-feature-center">
-                                <div class="nk-feature-img">
-                                    <img class="round" src="./images/slides/promo-c.png" srcset="./images/slides/promo-c2x.png 2x" alt="">
-                                </div>
-                                <div class="nk-feature-content py-4 p-sm-5">
-                                    <h4>Dashlite</h4>
-                                    <p>You can start to create your products easily with its user-friendly design & most completed responsive layout.</p>
-                                </div>
-                            </div>
-                        </div><!-- .slider-item -->
-                    </div><!-- .slider-init -->
-                    <div class="slider-dots"></div>
-                    <div class="slider-arrows"></div>
-                </div><!-- .slider-wrap -->
+    <!-- .slider-wrap -->
             </div><!-- .nk-split-content -->
         </div><!-- .nk-split -->
     </div><!-- app body @e -->

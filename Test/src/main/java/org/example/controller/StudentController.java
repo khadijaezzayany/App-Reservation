@@ -26,16 +26,16 @@ public class StudentController {
 	@Autowired
 	private TypereservationDAO typereservationDAO;
 
-	@RequestMapping(value = "/addResrvation")
+	@RequestMapping(value = "addResrvation")
 	public String addRes(Model model, HttpServletRequest request) {
-		String date = request.getParameter("date");
+		String date = request.getParameter("fv-subject");
 		String category = request.getParameter("category");
 		 System.out.println("Dooooooooooonnnnnnnneeeeeeeeeeee");
 		TypeReser typeRes = res.getResByName(category);
 		// System.out.println(LoginController.user.getFirstName());
 		Reservation reservation = new Reservation(LoginController.user, date, false, typeRes);
 		resrvationDaoImp.addReservation(reservation);
-		return "redirect:/student";
+		return "redirect:/Account";
 	}
 //	 @RequestMapping("listTypeReservation")
 //	public String listTtype(ModelMap modelMap) {

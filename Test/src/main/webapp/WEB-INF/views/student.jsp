@@ -591,7 +591,7 @@ response.setDateHeader ("Expires", 0);
 															</div>
 														</div>
 														<div class="nk-wg1-action">
-															<a href="addResBut" class="link"><span> Add
+															<a href="Test/addResBut" class="link"><span> Add
 																	Reservation</span> <em class="icon ni ni-chevron-right"></em></a>
 														</div>
 													</div>
@@ -660,7 +660,7 @@ response.setDateHeader ("Expires", 0);
 															</div>
 														</div>
 														<div class="nk-wg1-action">
-															<a href="histResStudent" class="link"><span>Reservation
+															<a href="Test/histResStudent" class="link"><span>Reservation
 																	History</span> <em class="icon ni ni-chevron-right"></em></a>
 														</div>
 													</div>

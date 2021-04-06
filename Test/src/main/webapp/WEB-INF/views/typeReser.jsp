@@ -18,7 +18,7 @@
 	</div>
 	<div is="container">
 	<div>
-		<form action="Addtype" method="post">
+		<form action="Test/Addtype" method="post">
 			<label>Type Reservation :  </label>
 			<input type="text" name="typeRes">
 			<label>Number of places : </label>

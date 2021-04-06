@@ -24,7 +24,8 @@ public class ReservationDAOImp implements ReservationDAO {
 	public void addReservation(Reservation res) {
 		session = HibernateUtil.getSession();
 		session.beginTransaction();
-		session.persist(res);
+		session.save(res);
+		//session.save(res.getUser());
 		session.getTransaction().commit();
 	}
 

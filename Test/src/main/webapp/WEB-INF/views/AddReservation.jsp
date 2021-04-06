@@ -314,7 +314,7 @@ response.setDateHeader ("Expires", 0);
 									<div class="nk-block">
 										<div class="card card-bordered">
 											<div class="card-inner">
-												<form action="addResrvation" method="post" class="form-validate">
+												<form action="Test/addResrvation" method="post" class="form-validate">
 													<div class="row g-gs">
 
 

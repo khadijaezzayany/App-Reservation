@@ -141,7 +141,7 @@ response.setDateHeader ("Expires", 0);
 														</div>
 													</div>
 													<div class="nk-notification-item dropdown-inner">
-														<div class="nk-notification-icon">
+														<div class="nk-notificationabu-icon">
 															<em
 																class="icon icon-circle bg-success-dim ni ni-curve-down-left"></em>
 														</div>
@@ -339,8 +339,7 @@ response.setDateHeader ("Expires", 0);
 									<div class="nk-block-head nk-block-head-lg">
 										<div class="nk-block-between-md g-4">
 											<div class="nk-block-head-content">
-												<h2 class="nk-block-title fw-normal">Welcome, Abu Bin
-													Ishtiyak</h2>
+												<h2 class="nk-block-title fw-normal">Welcome, <c:out value="${fn}"></c:out></h2>
 												<div class="nk-block-des">
 													<p>Welcome to our dashboard. Manage your account and
 														your subscriptions.</p>
@@ -489,7 +488,7 @@ response.setDateHeader ("Expires", 0);
 															</div>
 														</div>
 														<div class="nk-wg1-action">
-															<a href="typeReser"
+															<a href="Test/typeReser"
 																class="link"><span> Setting Type Reservation</span> <em
 																class="icon ni ni-chevron-right"></em></a>
 														</div>
@@ -558,7 +557,7 @@ response.setDateHeader ("Expires", 0);
 															</div>
 														</div>
 														<div class="nk-wg1-action">
-															<a href="histReservation" class="link"><span>Reservation
+															<a href="Test/histReservation" class="link"><span>Reservation
 																	History</span> <em class="icon ni ni-chevron-right"></em></a>
 														</div>
 													</div>
@@ -628,7 +627,7 @@ response.setDateHeader ("Expires", 0);
 															</div>
 														</div>
 														<div class="nk-wg1-action">
-															<a href="listUsers"
+															<a href="Test/listUsers"
 																class="link"><span>Manage Users</span> <em
 																class="icon ni ni-chevron-right"></em></a>
 														</div>

@@ -27,7 +27,7 @@ public class TypeResController {
 	public ModelAndView typeReserv(ModelMap modelMape) {
 		List<TypeReser> theType = trdi.listTypereservation();
 		modelMape.put("typeRe", theType);
-		return new ModelAndView("typeReser");
+		return new ModelAndView("TypeOfReservation");
 	}
 	
 	
